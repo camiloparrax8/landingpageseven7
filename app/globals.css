@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: #f5f7fa;
+  --color-ink: #1d3550;
+  --color-ink-soft: #304a66;
+  --color-body: #314254;
+  --color-muted: #6d7f91;
+  --color-line: #d9e1e9;
+  --color-panel: #eef3f7;
+  --color-accent: #f4c21f;
+  --color-accent-deep: #ddb000;
+  --color-footer: #203549;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
