@@ -6,6 +6,8 @@ type BrandLogoProps = {
   href?: string;
   "aria-label"?: string;
   className?: string;
+  /** Sustituye la imagen (p. ej. `SITE_ASSETS.logoWhite` en footer). */
+  imageSrc?: string;
   /** Clases extra para la etiqueta `img`. */
   imageClassName?: string;
   /** Marca tipográfica (header); por defecto imagen (footer, etc.). */
@@ -16,6 +18,7 @@ export function BrandLogo({
   href = "/",
   "aria-label": ariaLabel = "Seven7 Company inicio",
   className,
+  imageSrc,
   imageClassName,
   variant = "image",
 }: BrandLogoProps) {
@@ -47,7 +50,7 @@ export function BrandLogo({
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={SITE_ASSETS.logo}
+        src={imageSrc ?? SITE_ASSETS.logo}
         alt="Seven7 Company"
         className={cn(
           "w-auto object-contain",

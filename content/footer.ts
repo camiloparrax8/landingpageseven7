@@ -14,7 +14,7 @@ export const FOOTER_LINKS = [
 export const FOOTER_CONTACT = {
   location: "Bogotá, Colombia",
   email: "info@seven7company.com",
-  phone: "+57 000 000 0000",
-  phoneHref: "tel:+570000000000",
-  whatsappHref: "https://wa.me/570000000000",
+  phone: "+57 300 860 0667",
+  phoneHref: "tel:+573008600667",
+  whatsappHref: "https://wa.me/573008600667",
 } as const;

@@ -3,6 +3,9 @@
  */
 export const SITE_ASSETS = {
   logo: "/assets/seven7-logo.png",
+  /** Logo claro sobre fondos oscuros (footer). Archivo en `public/assets/`. */
+  logoWhite:
+    "/assets/" + encodeURIComponent("Logo Seven Blanco.png"),
   /** Banner hero (Seven 2026 · Caminos). */
   banner: "/assets/seven7-banner.png",
 } as const;

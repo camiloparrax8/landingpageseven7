@@ -7,6 +7,7 @@ type ButtonLinkProps = {
   children: React.ReactNode;
   className?: string;
   external?: boolean;
+  onClick?: () => void;
 };
 
 function isNonNextHref(href: string) {
@@ -32,19 +33,20 @@ export function ButtonLink({
   children,
   className,
   external,
+  onClick,
 }: ButtonLinkProps) {
   const cls = cn(base, variants[variant], className);
 
   if (external || isNonNextHref(href)) {
     return (
-      <a href={href} className={cls}>
+      <a href={href} className={cls} onClick={onClick}>
         {children}
       </a>
     );
   }
 
   return (
-    <Link href={href} className={cls}>
+    <Link href={href} className={cls} onClick={onClick}>
       {children}
     </Link>
   );

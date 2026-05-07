@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { BrandLogo } from "@/components/atoms/BrandLogo";
+import { FooterLegalBar } from "@/components/molecules/FooterLegalBar";
+import { SITE_ASSETS } from "@/lib/site-assets";
 import {
   FOOTER_CONTACT,
   FOOTER_LINKS,
@@ -15,8 +17,9 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 items-start gap-10 max-[1100px]:grid-cols-2 max-[1100px]:gap-9 lg:grid-cols-[1.15fr_0.8fr_0.85fr] lg:gap-10">
           <div>
             <BrandLogo
-              className="inline-flex rounded-[14px] border border-white/[0.16] bg-white/[0.12] p-2.5 px-3.5"
-              imageClassName="h-[52px] max-[820px]:h-[46px] drop-shadow-[0_2px_6px_rgba(0,0,0,0.25)]"
+              imageSrc={SITE_ASSETS.logoWhite}
+              className="inline-flex shrink-0"
+              imageClassName="h-[52px] w-auto max-h-[52px] max-w-[min(260px,70vw)] object-contain object-left max-[820px]:h-[46px] max-[820px]:max-h-[46px]"
             />
             <p className="mt-[18px] max-w-[320px] text-[15px] leading-[1.7] text-white/68">
               {FOOTER_TAGLINE}
@@ -68,7 +71,7 @@ export function SiteFooter() {
           )}
         >
           <span>© 2025 Seven7 Company. Todos los derechos reservados.</span>
-          <span>Política de privacidad · Términos</span>
+          <FooterLegalBar />
         </div>
       </div>
     </footer>

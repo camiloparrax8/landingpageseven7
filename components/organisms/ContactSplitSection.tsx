@@ -86,7 +86,7 @@ export function ContactSplitSection() {
                 name="telefono"
                 type="tel"
                 autoComplete="tel"
-                placeholder="+57 …"
+                placeholder="+57 300 860 0667"
                 className={control}
               />
             </FormField>

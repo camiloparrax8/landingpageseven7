@@ -10,7 +10,7 @@ import { HERO_BACKGROUND_LAYERS } from "@/lib/site-assets";
 export function HomeHero() {
   return (
     <section
-      className=" px-24 relative flex min-h-[calc(80svh-88px)] max-md:min-h-[calc(100svh-72px)] max-[480px]:min-h-[calc(100svh-66px)] items-stretch overflow-hidden"
+      className=" px-4 sm:px-12 relative flex min-h-[calc(80svh-88px)] max-md:min-h-[calc(100svh-72px)] max-[480px]:min-h-[calc(100svh-66px)] items-stretch overflow-hidden lg:px-24"
       id="inicio"
     >
       <div

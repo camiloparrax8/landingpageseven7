@@ -109,7 +109,7 @@ export const HOME_CTA = {
   ],
   primary: { href: "mailto:info@seven7company.com", label: "Agendar una llamada" },
   secondary: {
-    href: "https://wa.me/570000000000",
+    href: "https://wa.me/573008600667",
     label: "Escribir por WhatsApp",
   },
 } as const;
