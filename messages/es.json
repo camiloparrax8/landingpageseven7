@@ -1,0 +1,374 @@
+{
+  "common": {
+    "header": {
+      "cta": "Hablemos",
+      "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "ia": "Soluciones IA",
+        "webApps": "Web y Apps",
+        "contact": "Contacto"
+      },
+      "openMenu": "Abrir menú",
+      "closeMenu": "Cerrar menú"
+    },
+    "footer": {
+      "tagline": "Soluciones tecnológicas para crecer con claridad.",
+      "linksTitle": "Enlaces",
+      "contactTitle": "Contacto",
+      "privacy": "Política de privacidad",
+      "terms": "Términos y condiciones",
+      "copyright": "© 2025 Seven7 Company. Todos los derechos reservados.",
+      "links": {
+        "services": "Servicios",
+        "consulting": "Consultoría tecnológica",
+        "ia": "Soluciones IA",
+        "webApps": "Web y Apps",
+        "customSoftware": "Software a la medida",
+        "digitalTransformation": "Transformación digital",
+        "contact": "Contacto"
+      }
+    },
+    "localeSwitcher": {
+      "es": "ES",
+      "en": "EN",
+      "label": "Idioma"
+    },
+    "breadcrumbs": {
+      "home": "Inicio",
+      "services": "Servicios"
+    }
+  },
+  "home": {
+    "meta": {
+      "title": "Seven7 Company | Tecnología para avanzar con claridad",
+      "description": "Desarrollamos soluciones web, apps, software e inteligencia artificial para empresas que necesitan avanzar con orden, visión y ejecución."
+    },
+    "hero": {
+      "eyebrow": "Seven7 Company",
+      "title": "Tecnología para avanzar con claridad.",
+      "lead": "Desarrollamos soluciones web, apps, software e inteligencia artificial para empresas que necesitan avanzar con orden, visión y ejecución.",
+      "ctaPrimary": "Ver servicios",
+      "ctaSecondary": "Agendar llamada",
+      "panelTitle": "Soluciones concretas para empresas que necesitan construir, ordenar o evolucionar.",
+      "points": {
+        "web": {
+          "title": "Web y plataformas",
+          "text": "Experiencias claras, funcionales y listas para crecer."
+        },
+        "apps": {
+          "title": "Apps y software",
+          "text": "Desarrollo útil, escalable y adaptado a procesos reales."
+        },
+        "ai": {
+          "title": "IA aplicada",
+          "text": "Automatización, asistentes y eficiencia con foco en negocio."
+        }
+      }
+    },
+    "logoStrip": {
+      "title": "Empresas que han confiado en nosotros"
+    },
+    "intro": {
+      "eyebrow": "Lo que hacemos",
+      "title": "Soluciones tecnológicas para necesidades reales.",
+      "copy": "Acompañamos empresas que necesitan mejorar, construir o evolucionar su operación con herramientas claras, funcionales y bien implementadas."
+    },
+    "services": {
+      "consulting": {
+        "title": "Consultoría tecnológica",
+        "description": "Te ayudamos a evaluar, ordenar e implementar la tecnología que realmente necesita tu empresa, con una visión práctica y aterrizada.",
+        "linkLabel": "Conocer más"
+      },
+      "ai": {
+        "title": "Inteligencia artificial",
+        "description": "Aplicamos IA para automatizar procesos, mejorar decisiones, crear asistentes y generar más eficiencia en tu operación.",
+        "linkLabel": "Conocer más"
+      },
+      "web": {
+        "title": "Desarrollo web",
+        "description": "Creamos sitios web, landings y plataformas con una estructura clara, diseño sólido y foco en rendimiento y conversión.",
+        "linkLabel": "Conocer más"
+      },
+      "mobile": {
+        "title": "Aplicaciones móviles",
+        "description": "Diseñamos y desarrollamos apps intuitivas y funcionales para iOS y Android, pensadas para crecer con tu negocio.",
+        "linkLabel": "Conocer más"
+      },
+      "customSoftware": {
+        "title": "Software a la medida",
+        "description": "Construimos soluciones específicas para procesos, operaciones y modelos de negocio que no encajan en herramientas estándar.",
+        "linkLabel": "Conocer más"
+      },
+      "digital": {
+        "title": "Transformación digital",
+        "description": "Acompañamos la evolución tecnológica de tu empresa con estrategia, estructura y ejecución enfocada en resultados.",
+        "linkLabel": "Conocer más"
+      }
+    },
+    "cta": {
+      "title": "Conversemos sobre tu próximo proyecto.",
+      "copy": "Si estás buscando una solución clara, funcional y bien pensada, podemos ayudarte a construirla.",
+      "highlights": {
+        "web": "Web y plataformas",
+        "apps": "Apps y software",
+        "ai": "IA aplicada"
+      },
+      "primaryLabel": "Agendar una llamada",
+      "secondaryLabel": "Escribir por WhatsApp"
+    }
+  },
+  "services": {
+    "meta": {
+      "title": "Servicios",
+      "description": "Soluciones tecnológicas para empresas que necesitan avanzar con claridad: consultoría, inteligencia artificial, desarrollo web, apps, software a la medida y transformación digital."
+    },
+    "hero": {
+      "eyebrow": "Servicios",
+      "title": "Soluciones tecnológicas para necesidades reales.",
+      "description": "Ayudamos a empresas que necesitan construir, ordenar o evolucionar su operación con tecnología clara, funcional y bien implementada."
+    },
+    "cards": {
+      "consulting": {
+        "title": "Consultoría tecnológica",
+        "description": "Te ayudamos a entender qué necesitas, qué conviene implementar y cómo tomar mejores decisiones tecnológicas para tu empresa.",
+        "linkLabel": "Conocer consultoría tecnológica"
+      },
+      "ai": {
+        "title": "Inteligencia artificial",
+        "description": "Aplicamos IA para automatizar tareas, optimizar procesos, mejorar la atención y generar decisiones más inteligentes.",
+        "linkLabel": "Conocer soluciones IA"
+      },
+      "web": {
+        "title": "Desarrollo web",
+        "description": "Creamos sitios web y plataformas con estructura clara, diseño sólido y foco en funcionalidad, velocidad y conversión.",
+        "linkLabel": "Conocer desarrollo web"
+      },
+      "mobile": {
+        "title": "Aplicaciones móviles",
+        "description": "Diseñamos y desarrollamos apps para iOS y Android pensadas para ofrecer una experiencia móvil útil y escalable.",
+        "linkLabel": "Conocer aplicaciones móviles"
+      },
+      "customSoftware": {
+        "title": "Software a la medida",
+        "description": "Construimos soluciones específicas para procesos y operaciones que necesitan algo más que una herramienta estándar.",
+        "linkLabel": "Conocer software a la medida"
+      },
+      "digital": {
+        "title": "Transformación digital",
+        "description": "Acompañamos la evolución tecnológica de tu empresa con estrategia, estructura y ejecución enfocada en resultados.",
+        "linkLabel": "Conocer transformación digital"
+      }
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contacto",
+      "description": "Conversemos sobre tu proyecto y construyamos una solución clara, funcional y bien pensada para tu empresa."
+    },
+    "hero": {
+      "eyebrow": "Contacto",
+      "title": "Hablemos de tu proyecto.",
+      "description": "Elige el formulario o un canal directo. Te respondemos con claridad sobre alcance y siguientes pasos."
+    },
+    "form": {
+      "eyebrow": "Escribir",
+      "title": "Un mensaje breve basta",
+      "description": "Etapa del proyecto, prioridad y contexto. Respondemos con claridad sobre alcance y siguientes pasos.",
+      "nameLabel": "Nombre",
+      "namePlaceholder": "Nombre",
+      "companyLabel": "Empresa",
+      "companyPlaceholder": "Empresa (opcional)",
+      "emailLabel": "Correo",
+      "emailPlaceholder": "correo@empresa.com",
+      "phoneLabel": "Teléfono",
+      "phonePlaceholder": "+57 300 860 0667",
+      "needLabel": "¿Qué necesitas?",
+      "needPlaceholder": "Seleccionar",
+      "messageLabel": "Mensaje",
+      "messagePlaceholder": "Contexto breve del proyecto o la necesidad.",
+      "submitLabel": "Enviar",
+      "needOptions": {
+        "consulting": "Consultoría tecnológica",
+        "ai": "Inteligencia artificial",
+        "web": "Desarrollo web",
+        "mobile": "Aplicaciones móviles",
+        "customSoftware": "Software a la medida",
+        "digital": "Transformación digital"
+      }
+    },
+    "aside": {
+      "eyebrow": "Sin formulario",
+      "title": "Mismo equipo por correo, teléfono o WhatsApp.",
+      "locationLabel": "Ubicación",
+      "locationLine": "Bogotá, Colombia",
+      "locationNote": "Proyectos remotos y presenciales según alcance.",
+      "emailLabel": "Correo",
+      "phoneLabel": "Teléfono",
+      "openEmail": "Abrir correo",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "ia": {
+    "meta": {
+      "title": "Inteligencia artificial",
+      "description": "Aplicamos inteligencia artificial a procesos reales para automatizar, asistir, analizar y mejorar decisiones de negocio."
+    },
+    "hero": {
+      "eyebrow": "Inteligencia artificial",
+      "title": "Inteligencia artificial aplicada al negocio.",
+      "description": "Diseñamos soluciones de IA que se conectan con procesos reales para automatizar, asistir, analizar y ayudar a tomar mejores decisiones."
+    },
+    "highlight": {
+      "eyebrow": "Soluciones",
+      "title": "IA útil, no decorativa.",
+      "lead": "No hablamos de inteligencia artificial como tendencia. La trabajamos como una herramienta que debe resolver, simplificar y aportar valor real.",
+      "panelTitle": "Dónde puede generar valor",
+      "panelBody": "Atención, operación, automatización documental, asistencia comercial, clasificación de datos y optimización de tiempos."
+    }
+  },
+  "consultoria": {
+    "meta": {
+      "title": "Consultoría tecnológica",
+      "description": "Ayudamos a empresas a tomar mejores decisiones tecnológicas con una visión clara, práctica y alineada a su operación."
+    },
+    "hero": {
+      "eyebrow": "Consultoría tecnológica",
+      "title": "Decisiones tecnológicas con más claridad.",
+      "description": "Te ayudamos a evaluar, ordenar e implementar la tecnología que realmente necesita tu empresa, con una visión práctica, estratégica y aterrizada."
+    },
+    "cards": {
+      "whatWeDo": {
+        "title": "Qué hacemos",
+        "copy": "Analizamos tu situación actual, entendemos tus procesos y te ayudamos a definir qué herramientas, plataformas o desarrollos tienen más sentido para tu negocio."
+      },
+      "whoFor": {
+        "title": "Para quién aplica",
+        "copy": "Para empresas que necesitan más claridad antes de invertir, cambiar herramientas, construir una solución nueva o iniciar un proceso de transformación digital."
+      }
+    }
+  },
+  "webDevelopment": {
+    "meta": {
+      "title": "Desarrollo web",
+      "description": "Creamos sitios web, landings y plataformas claras, funcionales y bien construidas para marcas y empresas."
+    },
+    "hero": {
+      "eyebrow": "Desarrollo web",
+      "title": "Sitios web claros, funcionales y bien construidos.",
+      "description": "Diseñamos y desarrollamos sitios web, landings y plataformas con foco en estructura, experiencia, rendimiento y conversión."
+    },
+    "sectionHeading": "Qué construimos",
+    "cards": {
+      "corporate": {
+        "title": "Sitios corporativos",
+        "copy": "Páginas pensadas para presentar tu marca, tus servicios y tu propuesta con claridad."
+      },
+      "landing": {
+        "title": "Landing pages",
+        "copy": "Páginas diseñadas para campañas, conversiones y captación de oportunidades."
+      },
+      "platform": {
+        "title": "Plataformas web",
+        "copy": "Soluciones más robustas para usuarios, procesos, contenidos o servicios digitales."
+      },
+      "customSoftware": {
+        "title": "Software a la medida",
+        "copy": "Soluciones específicas para procesos, operaciones o modelos de negocio que no encajan en herramientas estándar."
+      },
+      "digital": {
+        "title": "Transformación digital",
+        "copy": "Acompañamos la evolución tecnológica de tu empresa con estrategia, estructura y ejecución enfocada en resultados."
+      },
+      "consulting": {
+        "title": "Consultoría tecnológica",
+        "copy": "Te ayudamos a entender qué necesitas, qué conviene implementar y cómo tomar mejores decisiones tecnológicas para tu empresa."
+      }
+    },
+    "cta": {
+      "title": "Hablemos de tu sitio o plataforma.",
+      "copy": "Cuéntanos qué necesitas construir, mejorar o lanzar. Respondemos con claridad sobre alcance, tiempos y siguientes pasos.",
+      "highlights": {
+        "web": "Sitios y landings",
+        "consulting": "Discovery y prioridades",
+        "digital": "Listo para evolucionar"
+      },
+      "primaryLabel": "Agendar una llamada",
+      "secondaryLabel": "Escribir por WhatsApp"
+    }
+  },
+  "mobileApps": {
+    "meta": {
+      "title": "Aplicaciones móviles",
+      "description": "Diseñamos y desarrollamos apps intuitivas y escalables para empresas que necesitan una experiencia móvil sólida."
+    },
+    "hero": {
+      "eyebrow": "Aplicaciones móviles",
+      "title": "Aplicaciones móviles pensadas para usarse de verdad.",
+      "description": "Diseñamos y desarrollamos apps claras, intuitivas y funcionales para empresas que necesitan ofrecer una experiencia móvil útil y escalable."
+    },
+    "cards": {
+      "service": {
+        "title": "Apps de servicio",
+        "copy": "Para atención, gestión de usuarios, acceso a información o interacción con clientes."
+      },
+      "ops": {
+        "title": "Apps operativas",
+        "copy": "Para procesos internos, seguimiento, control y eficiencia en operación."
+      },
+      "commerce": {
+        "title": "Apps comerciales",
+        "copy": "Para ventas, reservas, beneficios, marketplaces o experiencias digitales de marca."
+      }
+    }
+  },
+  "customSoftware": {
+    "meta": {
+      "title": "Software a la medida",
+      "description": "Construimos soluciones específicas para procesos y operaciones que requieren una lógica propia y una mejor adaptación."
+    },
+    "hero": {
+      "eyebrow": "Software a la medida",
+      "title": "Software diseñado para la realidad de tu operación.",
+      "description": "Construimos soluciones a la medida para procesos, equipos y modelos de negocio que necesitan algo más específico que una herramienta estándar."
+    },
+    "cards": {
+      "meaning": {
+        "title": "Qué significa a la medida",
+        "copy": "Significa construir una herramienta pensada desde tu operación, tus procesos y tus objetivos, en lugar de adaptar tu empresa a una herramienta genérica."
+      },
+      "when": {
+        "title": "Cuándo conviene",
+        "copy": "Cuando el proceso es muy particular, cuando las herramientas existentes no responden bien o cuando la operación necesita una lógica propia para funcionar mejor."
+      }
+    }
+  },
+  "digitalTransformation": {
+    "meta": {
+      "title": "Transformación digital",
+      "description": "Acompañamos la evolución tecnológica de tu empresa con estrategia, estructura y ejecución enfocada en resultados."
+    },
+    "hero": {
+      "eyebrow": "Transformación digital",
+      "title": "Transformación digital con orden y sentido.",
+      "description": "Acompañamos empresas que necesitan evolucionar su operación, sus herramientas y su forma de trabajar con una visión clara y bien ejecutada."
+    },
+    "cards": {
+      "intro": {
+        "title": "Más que tecnología, es evolución.",
+        "copy": "Transformar digitalmente una empresa no es solo cambiar herramientas. Es revisar procesos, mejorar estructuras y construir una manera más clara y eficiente de operar."
+      },
+      "improve": {
+        "title": "Qué puede mejorar",
+        "items": [
+          "Procesos más claros",
+          "Menos reprocesos",
+          "Mejor flujo de información",
+          "Mayor control",
+          "Más eficiencia",
+          "Mejor capacidad de crecimiento"
+        ]
+      }
+    }
+  }
+}

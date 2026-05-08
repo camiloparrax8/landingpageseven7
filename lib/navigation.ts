@@ -1,29 +1,38 @@
-export const MAIN_NAV = [
-  { href: "/", label: "Inicio" },
-  { href: "/services", label: "Servicios" },
-  { href: "/ia", label: "Soluciones IA" },
-  { href: "/desarrollo-web", label: "Web y Apps" },
-  { href: "/contacto", label: "Contacto" },
-] as const;
+import { locales } from "@/i18n/config";
 
-export type MainNavHref = (typeof MAIN_NAV)[number]["href"];
+export type MainNavHref =
+  | "/"
+  | "/services"
+  | "/ia"
+  | "/desarrollo-web"
+  | "/contacto";
+
+function stripLocale(pathname: string): string {
+  const segments = pathname.split("/").filter(Boolean);
+  if (segments.length > 0 && locales.includes(segments[0] as "es" | "en")) {
+    return "/" + segments.slice(1).join("/") || "/";
+  }
+  return pathname;
+}
 
 export function isNavActive(pathname: string, href: MainNavHref): boolean {
+  const cleanPath = stripLocale(pathname);
+
   if (href === "/") {
-    return pathname === "/";
+    return cleanPath === "/" || cleanPath === "";
   }
   if (href === "/desarrollo-web") {
     return (
-      pathname === "/desarrollo-web" || pathname === "/aplicaciones-moviles"
+      cleanPath === "/desarrollo-web" || cleanPath === "/aplicaciones-moviles"
     );
   }
   if (href === "/services") {
     return (
-      pathname === "/services" ||
-      pathname === "/consultoria-tecnologica" ||
-      pathname === "/software-medida" ||
-      pathname === "/transformacion-digital"
+      cleanPath === "/services" ||
+      cleanPath === "/consultoria-tecnologica" ||
+      cleanPath === "/software-medida" ||
+      cleanPath === "/transformacion-digital"
     );
   }
-  return pathname === href || pathname.startsWith(`${href}/`);
+  return cleanPath === href || cleanPath.startsWith(`${href}/`);
 }

@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/atoms/BrandLogo";
+import { LocaleSwitcher } from "@/components/molecules/LocaleSwitcher";
 import { PrimaryNav } from "@/components/molecules/PrimaryNav";
 import { cn } from "@/lib/cn";
 
@@ -43,16 +44,16 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
       ) : null}
       <div
         className={cn(
-          "relative z-[50] mx-auto flex h-full w-full max-w-[1200px] items-center justify-between gap-4 px-6 sm:px-10 md:gap-6 md:px-12 lg:px-14",
+          "relative z-[50] mx-auto flex h-full w-full max-w-[1200px] items-center justify-between gap-4 px-6 sm:px-10 md:gap-6 md:px-6 lg:px-4",
         )}
       >
         <BrandLogo imageClassName="h-16 max-h-16 max-w-[min(200px,46vw)] object-left max-[820px]:h-10" />
-        <PrimaryNav
-          pathname={pathname}
-          menuOpen={menuOpen}
-          onCloseMobileMenu={() => setMenuOpen(false)}
-        />
-        <button
+        
+        <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
+        <div className="">
+        <LocaleSwitcher />
+
+          <button
           type="button"
           className="relative z-[51] hidden size-[46px] shrink-0 place-items-center rounded-full border border-slate-300/90 bg-white text-[#0f172a] shadow-sm transition-colors hover:bg-slate-50 max-md:inline-grid"
           aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
@@ -60,6 +61,7 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
           aria-controls="mobile-nav-panel"
           onClick={() => setMenuOpen((o) => !o)}
         >
+        
           {menuOpen ? (
             <span className="block text-xl font-light leading-none" aria-hidden>
               ×
@@ -71,7 +73,8 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
               <span className="block h-[2px] w-[18px] rounded-full bg-current" />
             </span>
           )}
-        </button>
+          </button>
+        </div>
       </div>
     </header>
   );

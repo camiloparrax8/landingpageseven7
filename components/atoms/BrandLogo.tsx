@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { SITE_ASSETS } from "@/lib/site-assets";
 import { cn } from "@/lib/cn";
 

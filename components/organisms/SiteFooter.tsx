@@ -1,16 +1,27 @@
-import Link from "next/link";
+"use client";
+
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import { BrandLogo } from "@/components/atoms/BrandLogo";
 import { FooterLegalBar } from "@/components/molecules/FooterLegalBar";
 import { SITE_ASSETS } from "@/lib/site-assets";
-import {
-  FOOTER_CONTACT,
-  FOOTER_LINKS,
-  FOOTER_TAGLINE,
-} from "@/content/footer";
+import { FOOTER_CONTACT } from "@/content/footer";
 import { CONTAINER } from "@/lib/layout";
 import { cn } from "@/lib/cn";
 
+const FOOTER_LINK_ITEMS = [
+  { href: "/services", labelKey: "services" },
+  { href: "/consultoria-tecnologica", labelKey: "consulting" },
+  { href: "/ia", labelKey: "ia" },
+  { href: "/desarrollo-web", labelKey: "webApps" },
+  { href: "/software-medida", labelKey: "customSoftware" },
+  { href: "/transformacion-digital", labelKey: "digitalTransformation" },
+  { href: "/contacto", labelKey: "contact" },
+] as const;
+
 export function SiteFooter() {
+  const t = useTranslations("common.footer");
+
   return (
     <footer className="bg-footer pb-[26px] pt-[58px] text-white/75">
       <div className={CONTAINER}>
@@ -22,28 +33,28 @@ export function SiteFooter() {
               imageClassName="h-[52px] w-auto max-h-[52px] max-w-[min(260px,70vw)] object-contain object-left max-[820px]:h-[46px] max-[820px]:max-h-[46px]"
             />
             <p className="mt-[18px] max-w-[320px] text-[15px] leading-[1.7] text-white/68">
-              {FOOTER_TAGLINE}
+              {t("tagline")}
             </p>
           </div>
           <div className="max-[1100px]:col-span-1 max-md:col-auto lg:col-auto">
             <h3 className="m-0 mb-4 text-sm uppercase tracking-[0.12em] text-white/56">
-              Enlaces
+              {t("linksTitle")}
             </h3>
             <div className="grid gap-3">
-              {FOOTER_LINKS.map(({ href, label }) => (
+              {FOOTER_LINK_ITEMS.map(({ href, labelKey }) => (
                 <Link
                   key={href}
                   href={href}
                   className="text-[15px] leading-[1.5] text-white/84 transition-colors hover:text-white"
                 >
-                  {label}
+                  {t(`links.${labelKey}`)}
                 </Link>
               ))}
             </div>
           </div>
           <div className="max-[1100px]:col-span-full max-md:col-auto lg:col-auto">
             <h3 className="m-0 mb-4 text-sm uppercase tracking-[0.12em] text-white/56">
-              Contacto
+              {t("contactTitle")}
             </h3>
             <div className="grid gap-3">
               <span className="text-[15px] leading-[1.5] text-white/84">
@@ -70,7 +81,7 @@ export function SiteFooter() {
             "max-[480px]:flex-col max-[480px]:items-start max-[480px]:gap-1.5",
           )}
         >
-          <span>© 2025 Seven7 Company. Todos los derechos reservados.</span>
+          <span>{t("copyright")}</span>
           <FooterLegalBar />
         </div>
       </div>

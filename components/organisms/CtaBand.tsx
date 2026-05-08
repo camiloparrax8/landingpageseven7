@@ -39,7 +39,29 @@ export function CtaBand({
           <SectionCopy className="text-white max-md:text-base">
             {copy}
           </SectionCopy>
-         
+          {highlights && highlights.length > 0 ? (
+            <ul className="mt-7 flex list-none flex-wrap gap-2.5 p-0 sm:gap-3">
+              {highlights.map(({ icon, label }) => (
+                <li
+                  key={`${icon}-${label}`}
+                  className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.07] px-3 py-2 backdrop-blur-md sm:gap-2.5 sm:px-3.5 sm:py-2.5"
+                >
+                  <span
+                    className="grid size-8 shrink-0 place-items-center rounded-xl bg-accent/15 ring-1 ring-accent/40 sm:size-9"
+                    aria-hidden
+                  >
+                    <ServiceCardIcon
+                      id={icon}
+                      className="!size-[18px] text-accent sm:!size-[20px]"
+                    />
+                  </span>
+                  <span className="text-[13px] font-semibold leading-tight text-white/95 sm:text-sm">
+                    {label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          ) : null}
         </div>
         <div className="flex flex-wrap justify-end gap-3.5 max-[1100px]:justify-start max-[480px]:flex-col">
           <ButtonLink href={primary.href} variant="primary">
