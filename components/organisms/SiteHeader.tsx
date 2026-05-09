@@ -48,31 +48,30 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
         )}
       >
         <BrandLogo imageClassName="h-16 max-h-16 max-w-[min(200px,46vw)] object-left max-[820px]:h-10" />
-        
-        <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
-        <div className="">
-        <LocaleSwitcher />
 
+        <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
+
+        <div className="flex shrink-0 items-center justify-end gap-2 max-[480px]:gap-1.5 md:gap-3">
+          <LocaleSwitcher />
           <button
-          type="button"
-          className="relative z-[51] hidden size-[46px] shrink-0 place-items-center rounded-full border border-slate-300/90 bg-white text-[#0f172a] shadow-sm transition-colors hover:bg-slate-50 max-md:inline-grid"
-          aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-nav-panel"
-          onClick={() => setMenuOpen((o) => !o)}
-        >
-        
-          {menuOpen ? (
-            <span className="block text-xl font-light leading-none" aria-hidden>
-              ×
-            </span>
-          ) : (
-            <span className="flex flex-col gap-[5px]" aria-hidden>
-              <span className="block h-[2px] w-[18px] rounded-full bg-current" />
-              <span className="block h-[2px] w-[18px] rounded-full bg-current" />
-              <span className="block h-[2px] w-[18px] rounded-full bg-current" />
-            </span>
-          )}
+            type="button"
+            className="relative z-[51] hidden size-[46px] shrink-0 place-items-center rounded-full border border-slate-300/90 bg-white text-[#0f172a] shadow-sm transition-colors hover:bg-slate-50 max-md:inline-grid max-[480px]:size-[42px]"
+            aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav-panel"
+            onClick={() => setMenuOpen((o) => !o)}
+          >
+            {menuOpen ? (
+              <span className="block text-xl font-light leading-none" aria-hidden>
+                ×
+              </span>
+            ) : (
+              <span className="flex flex-col gap-[5px]" aria-hidden>
+                <span className="block h-[2px] w-[18px] rounded-full bg-current" />
+                <span className="block h-[2px] w-[18px] rounded-full bg-current" />
+                <span className="block h-[2px] w-[18px] rounded-full bg-current" />
+              </span>
+            )}
           </button>
         </div>
       </div>

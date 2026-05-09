@@ -18,7 +18,7 @@
       "contactTitle": "Contact",
       "privacy": "Privacy Policy",
       "terms": "Terms & Conditions",
-      "copyright": "© 2025 Seven7 Company. All rights reserved.",
+      "copyright": "© 2025 Seven Siete Company. All rights reserved.",
       "links": {
         "services": "Services",
         "consulting": "Technology Consulting",
@@ -41,11 +41,11 @@
   },
   "home": {
     "meta": {
-      "title": "Seven7 Company | Technology to move forward with clarity",
+      "title": "Seven Siete Company | Technology to move forward with clarity",
       "description": "We develop web solutions, apps, software and artificial intelligence for companies that need to move forward with order, vision and execution."
     },
     "hero": {
-      "eyebrow": "Seven7 Company",
+      "eyebrow": "Seven Siete Company",
       "title": "Technology to move forward with clarity.",
       "lead": "We develop web solutions, apps, software and artificial intelligence for companies that need to move forward with order, vision and execution.",
       "ctaPrimary": "View services",

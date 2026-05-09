@@ -44,15 +44,15 @@ export function CtaBand({
               {highlights.map(({ icon, label }) => (
                 <li
                   key={`${icon}-${label}`}
-                  className="flex items-center gap-2 rounded-2xl border border-white/15 bg-white/[0.07] px-3 py-2 backdrop-blur-md sm:gap-2.5 sm:px-3.5 sm:py-2.5"
+                  className="flex items-center gap-2 rounded-2xl   px-3 py-2 backdrop-blur-md sm:gap-2.5 sm:px-3.5 sm:py-2.5"
                 >
                   <span
-                    className="grid size-8 shrink-0 place-items-center rounded-xl bg-accent/15 ring-1 ring-accent/40 sm:size-9"
+                    className="grid size-8 place-items-center rounded-xl bg-accent shadow-[inset_0_1px_0_rgba(255,255,255,0.35)] ring-1 ring-black/10 sm:size-9"
                     aria-hidden
                   >
                     <ServiceCardIcon
                       id={icon}
-                      className="!size-[18px] text-accent sm:!size-[20px]"
+                      className="!size-[18px] sm:!size-[20px]"
                     />
                   </span>
                   <span className="text-[13px] font-semibold leading-tight text-white/95 sm:text-sm">
