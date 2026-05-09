@@ -205,7 +205,6 @@
       "title": "The same team replies via email, phone or WhatsApp.",
       "locationLabel": "Location",
       "locationLine": "Bogotá, Colombia",
-      "locationNote": "Remote and on-site projects depending on scope.",
       "emailLabel": "Email",
       "phoneLabel": "Phone",
       "openEmail": "Open email",
@@ -362,15 +361,8 @@
         "copy": "Digitally transforming a company isn't just swapping tools. It's reviewing processes, improving structures and building a clearer, more efficient way to operate."
       },
       "improve": {
-        "title": "What can improve",
-        "items": [
-          "Clearer processes",
-          "Fewer reworks",
-          "Better information flow",
-          "Greater control",
-          "More efficiency",
-          "Better capacity to grow"
-        ]
+        "title": "What can improve?",
+        "copy": "When transformation is approached with discipline, what typically improves is very tangible: clearer processes for the whole team, fewer reworks, better information flow across areas, stronger operational control and visibility, greater efficiency in how time and resources are used, and a more solid, sustainable capacity to grow."
       }
     }
   }

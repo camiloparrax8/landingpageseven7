@@ -205,7 +205,6 @@
       "title": "El mismo equipo responde por correo, teléfono o WhatsApp.",
       "locationLabel": "Ubicación",
       "locationLine": "Bogotá, Colombia",
-      "locationNote": "Proyectos remotos y presenciales según alcance.",
       "emailLabel": "Correo",
       "phoneLabel": "Teléfono",
       "openEmail": "Abrir correo",
@@ -362,15 +361,8 @@
         "copy": "Transformar digitalmente una empresa no es solo cambiar herramientas. Es revisar procesos, mejorar estructuras y construir una manera más clara y eficiente de operar."
       },
       "improve": {
-        "title": "Qué puede mejorar",
-        "items": [
-          "Procesos más claros",
-          "Menos reprocesos",
-          "Mejor flujo de información",
-          "Mayor control",
-          "Más eficiencia",
-          "Mejor capacidad de crecimiento"
-        ]
+        "title": "¿Qué puede mejorar?",
+        "copy": "Cuando la transformación se aborda con orden, lo que suele mejorar es muy concreto: procesos más claros para todo el equipo, menos reprocesos y retrabajo, un mejor flujo de información entre áreas, mayor control sobre la operación y los indicadores, más eficiencia en el uso del tiempo y los recursos, y una capacidad de crecimiento más sólida y sostenible."
       }
     }
   }

@@ -24,7 +24,6 @@ export default async function TransformacionDigitalPage({ params }: Props) {
   const tNav = await getTranslations("common.breadcrumbs");
   const tHero = await getTranslations("digitalTransformation.hero");
   const tCards = await getTranslations("digitalTransformation.cards");
-  const items = tCards.raw("improve.items") as string[];
 
   return (
     <main>
@@ -44,11 +43,7 @@ export default async function TransformacionDigitalPage({ params }: Props) {
           <p>{tCards("intro.copy")}</p>
         </InfoCard>
         <InfoCard title={tCards("improve.title")}>
-          <ul>
-            {items.map((line, index) => (
-              <li key={`${index}-${line}`}>{line}</li>
-            ))}
-          </ul>
+          <p>{tCards("improve.copy")}</p>
         </InfoCard>
       </InfoCardsSection>
     </main>

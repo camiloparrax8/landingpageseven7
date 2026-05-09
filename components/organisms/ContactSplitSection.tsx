@@ -31,8 +31,9 @@ const selectControl = cn(
   "cursor-pointer appearance-none pr-11",
 );
 
+/** Mismo cuerpo que ubicación (Bogotá), en negrita; enlaces con subrayado al hover. */
 const linkChannel =
-  "text-[17px] font-semibold tracking-[-0.02em] text-ink underline-offset-[6px] transition-colors hover:text-ink/80 hover:underline";
+  "text-[15px] font-bold leading-[1.6] text-muted underline-offset-[5px] transition-colors hover:text-ink-soft hover:underline";
 
 const asideIconBox =
   "mt-0.5 flex size-9 shrink-0 items-center justify-center rounded-xl bg-panel text-ink ring-1 ring-ink/[0.06]";
@@ -307,11 +308,11 @@ export function ContactSplitSection() {
           )}
         >
           <Eyebrow className="mb-2.5">{tAside("eyebrow")}</Eyebrow>
-          <p className="m-0 text-base font-normal leading-[1.55] text-ink">
+          <p className="m-0 max-w-[28rem] text-base font-normal leading-[1.65] text-muted">
             {tAside("title")}
           </p>
 
-          <dl className="mt-8 grid gap-4">
+          <dl className="mt-8 grid gap-3.5">
             <div className="flex gap-3.5">
               <span className={asideIconBox} aria-hidden>
                 <IconMapPin className="size-[18px]" />
@@ -320,11 +321,8 @@ export function ContactSplitSection() {
                 <dt className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
                   {tAside("locationLabel")}
                 </dt>
-                <dd className="m-0 mt-1.5 text-[15px] leading-[1.6] text-muted">
+                <dd className="m-0 mt-1.5 text-[15px] font-normal leading-[1.6] text-muted">
                   {tAside("locationLine")}
-                  <span className="mt-1 block text-[14px] leading-relaxed text-muted/90">
-                    {tAside("locationNote")}
-                  </span>
                 </dd>
               </div>
             </div>
