@@ -169,12 +169,15 @@
     "hero": {
       "eyebrow": "Contacto",
       "title": "Hablemos de tu proyecto.",
-      "description": "Elige el formulario o un canal directo. Te respondemos con claridad sobre alcance y siguientes pasos."
+      "description": "Escríbenos desde aquí o elige correo, teléfono o WhatsApp. Respondemos con claridad sobre alcance y siguientes pasos."
     },
     "form": {
-      "eyebrow": "Escribir",
-      "title": "Un mensaje breve basta",
-      "description": "Etapa del proyecto, prioridad y contexto. Respondemos con claridad sobre alcance y siguientes pasos.",
+      "sectionTitle": "Formulario de contacto",
+      "lead": "Completa los datos y pulsa Enviar: se abrirá tu correo con el mensaje listo para enviarnos.",
+      "mailSubject": "Consulta desde la web — Seven Siete Company",
+      "validationRequired": "Indica al menos nombre, correo y mensaje.",
+      "validationEmailInvalid": "Introduce un correo válido.",
+      "submitOpenedMailto": "Si se abrió tu cliente de correo, solo confirma el envío. Si no pasó nada, escríbenos a {email}.",
       "nameLabel": "Nombre",
       "namePlaceholder": "Nombre",
       "companyLabel": "Empresa",
@@ -198,8 +201,8 @@
       }
     },
     "aside": {
-      "eyebrow": "Sin formulario",
-      "title": "Mismo equipo por correo, teléfono o WhatsApp.",
+      "eyebrow": "Otros medios",
+      "title": "El mismo equipo responde por correo, teléfono o WhatsApp.",
       "locationLabel": "Ubicación",
       "locationLine": "Bogotá, Colombia",
       "locationNote": "Proyectos remotos y presenciales según alcance.",

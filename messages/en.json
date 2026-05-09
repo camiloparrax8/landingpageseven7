@@ -169,12 +169,15 @@
     "hero": {
       "eyebrow": "Contact",
       "title": "Let's talk about your project.",
-      "description": "Choose the form or a direct channel. We'll respond clearly about scope and next steps."
+      "description": "Reach out here or use email, phone or WhatsApp. We'll respond clearly about scope and next steps."
     },
     "form": {
-      "eyebrow": "Write",
-      "title": "A brief message is enough",
-      "description": "Project stage, priority and context. We respond clearly about scope and next steps.",
+      "sectionTitle": "Contact form",
+      "lead": "Fill in the fields and tap Send: your email app will open with the message ready to send to us.",
+      "mailSubject": "Website inquiry — Seven Siete Company",
+      "validationRequired": "Please add at least name, email and message.",
+      "validationEmailInvalid": "Enter a valid email address.",
+      "submitOpenedMailto": "If your mail app opened, just confirm send. If nothing happened, email us at {email}.",
       "nameLabel": "Name",
       "namePlaceholder": "Name",
       "companyLabel": "Company",
@@ -198,8 +201,8 @@
       }
     },
     "aside": {
-      "eyebrow": "No form",
-      "title": "Same team via email, phone or WhatsApp.",
+      "eyebrow": "Other channels",
+      "title": "The same team replies via email, phone or WhatsApp.",
       "locationLabel": "Location",
       "locationLine": "Bogotá, Colombia",
       "locationNote": "Remote and on-site projects depending on scope.",
