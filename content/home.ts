@@ -73,7 +73,7 @@ export const HOME_SERVICE_CARDS: ServiceCardContent[] = [
 export const LOGO_STRIP = {
   title: "Empresas que han confiado en nosotros",
   logos: [
-    { src: "/assets/clients/1.png", alt: "Logo de marca aliada 1" },
+    { src: "/assets/clients/1.jpeg", alt: "Logo de marca aliada 1" },
     { src: "/assets/clients/2.png", alt: "Logo de marca aliada 2" },
     { src: "/assets/clients/3.png", alt: "Logo de marca aliada 3" },
     { src: "/assets/clients/4.png", alt: "Logo de marca aliada 4" },
@@ -83,13 +83,14 @@ export const LOGO_STRIP = {
     { src: "/assets/clients/8.png", alt: "Logo de marca aliada 8" },
     { src: "/assets/clients/9.png", alt: "Logo de marca aliada 9" },
     { src: "/assets/clients/10.png", alt: "Logo de marca aliada 10" },
-    { src: "/assets/clients/11.jpg", alt: "Logo de marca aliada 11" },
+    { src: "/assets/clients/11.png", alt: "Logo de marca aliada 11" },
     { src: "/assets/clients/12.png", alt: "Logo de marca aliada 12" },
-    { src: "/assets/clients/13.svg", alt: "Logo de marca aliada 13" },
+    { src: "/assets/clients/13.png", alt: "Logo de marca aliada 13" },
     { src: "/assets/clients/14.png", alt: "Logo de marca aliada 14" },
     { src: "/assets/clients/15.png", alt: "Logo de marca aliada 15" },
     { src: "/assets/clients/16.png", alt: "Logo de marca aliada 16" },
     { src: "/assets/clients/17.png", alt: "Logo de marca aliada 17" },
+    { src: "/assets/clients/18.jpeg", alt: "Logo de marca aliada 18" },
   ],
 } as const;
 
