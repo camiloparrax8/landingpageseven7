@@ -1,5 +1,5 @@
 export const FOOTER_TAGLINE =
-  "Soluciones tecnológicas para crecer con claridad.";
+  "Construimos soluciones tecnológicas que ayudan a las empresas a operar mejor, crecer con estructura y avanzar con confianza.";
 
 export const FOOTER_LINKS = [
   { href: "/services", label: "Servicios" },

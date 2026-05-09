@@ -32,7 +32,7 @@ export function SiteFooter() {
               className="inline-flex shrink-0"
               imageClassName="h-[52px] w-auto max-h-[52px] max-w-[min(260px,70vw)] object-contain object-left max-[820px]:h-[46px] max-[820px]:max-h-[46px]"
             />
-            <p className="mt-[18px] max-w-[320px] text-[15px] leading-[1.7] text-white/68">
+            <p className="mt-[18px] max-w-[min(380px,92vw)] text-[15px] font-normal italic leading-[1.65] text-white/72">
               {t("tagline")}
             </p>
           </div>

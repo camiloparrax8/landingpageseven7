@@ -5,7 +5,7 @@ export type MainNavHref =
   | "/services"
   | "/ia"
   | "/desarrollo-web"
-  | "/contacto";
+  | "/transformacion-digital";
 
 function stripLocale(pathname: string): string {
   const segments = pathname.split("/").filter(Boolean);
@@ -30,9 +30,11 @@ export function isNavActive(pathname: string, href: MainNavHref): boolean {
     return (
       cleanPath === "/services" ||
       cleanPath === "/consultoria-tecnologica" ||
-      cleanPath === "/software-medida" ||
-      cleanPath === "/transformacion-digital"
+      cleanPath === "/software-medida"
     );
+  }
+  if (href === "/transformacion-digital") {
+    return cleanPath === "/transformacion-digital";
   }
   return cleanPath === href || cleanPath.startsWith(`${href}/`);
 }

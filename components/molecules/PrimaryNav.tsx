@@ -16,7 +16,11 @@ const NAV_ITEMS = [
   { href: "/services", labelKey: "services" },
   { href: "/ia", labelKey: "ia" },
   { href: "/desarrollo-web", labelKey: "webApps" },
-  { href: "/contacto", labelKey: "contact" },
+  {
+    href: "/transformacion-digital",
+    labelKey: "digitalTransformation",
+    ariaLabelKey: "digitalTransformationAria",
+  },
 ] as const;
 
 export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
@@ -36,12 +40,18 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
         className="flex items-center gap-8 max-md:flex-col max-md:items-start max-md:gap-0 max-md:self-stretch md:gap-10"
         aria-label="Principal"
       >
-        {NAV_ITEMS.map(({ href, labelKey }) => {
+        {NAV_ITEMS.map((item) => {
+          const { href, labelKey } = item;
           const isActive = isNavActive(pathname, href as MainNavHref);
+          const ariaLabel =
+            "ariaLabelKey" in item
+              ? t(`nav.${item.ariaLabelKey}`)
+              : undefined;
           return (
             <Link
               key={href}
               href={href}
+              aria-label={ariaLabel}
               className={cn(
                 "relative text-[18px] font-semibold text-[#0f172a] transition-opacity max-md:block max-md:w-full max-md:border-b max-md:border-slate-200/80 max-md:py-3.5 max-md:text-base",
                 isActive ? "opacity-100" : "opacity-90 hover:opacity-100",

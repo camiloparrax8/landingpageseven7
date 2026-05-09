@@ -7,13 +7,14 @@
         "services": "Services",
         "ia": "AI Solutions",
         "webApps": "Web & Apps",
-        "contact": "Contact"
+        "digitalTransformation": "TD",
+        "digitalTransformationAria": "Digital transformation"
       },
       "openMenu": "Open menu",
       "closeMenu": "Close menu"
     },
     "footer": {
-      "tagline": "Technology solutions to grow with clarity.",
+      "tagline": "We build technology solutions that help companies operate better, grow with structure, and move forward with confidence.",
       "linksTitle": "Links",
       "contactTitle": "Contact",
       "privacy": "Privacy Policy",

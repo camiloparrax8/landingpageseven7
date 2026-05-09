@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description:
     "Desarrollamos soluciones web, apps, software e inteligencia artificial para empresas que necesitan avanzar con orden, visión y ejecución.",
   icons: {
-    icon: [{ url: "/assets/favicon.png", type: "image/png" }],
-    apple: "/assets/favicon.png",
+    icon: [{ url: "/assets/favicon.jpeg", type: "image/jpeg" }],
+    apple: "/assets/favicon.jpeg",
   },
 };
 

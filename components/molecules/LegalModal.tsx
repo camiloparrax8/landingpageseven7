@@ -105,7 +105,7 @@ export function LegalModal({ open, onClose, doc }: LegalModalProps) {
         aria-modal="true"
         aria-labelledby={titleId}
         className={cn(
-          "relative z-[1] flex max-h-[min(720px,calc(100dvh-2rem))] w-full max-w-[42rem] flex-col rounded-[22px]",
+          "relative z-[1] flex max-h-[min(720px,calc(100dvh-2rem))] w-full max-w-[42rem] flex-col overflow-hidden rounded-[22px]",
           "border border-slate-200/95 bg-white shadow-[0_24px_70px_rgba(15,28,42,0.18)] max-sm:rounded-b-[18px]",
         )}
       >
