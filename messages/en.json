@@ -226,8 +226,34 @@
       "eyebrow": "Solutions",
       "title": "Useful AI, not decorative.",
       "lead": "We don't talk about artificial intelligence as a trend. We treat it as a tool that must solve, simplify and deliver real value.",
-      "panelTitle": "Where it can create value",
-      "panelBody": "Customer service, operations, document automation, sales assistance, data classification and time optimization."
+      "ctaLabel": "Talk about your project",
+      "cardsTitle": "Where we generate value",
+      "cards": {
+        "atencion": {
+          "title": "Customer service",
+          "description": "Assistants and chatbots that respond, schedule, filter and escalate automatically."
+        },
+        "operacion": {
+          "title": "Operations",
+          "description": "Automation of internal flows, alerts and repetitive time-consuming tasks."
+        },
+        "documental": {
+          "title": "Documentation",
+          "description": "Extraction, classification and document generation with minimal human intervention."
+        },
+        "comercial": {
+          "title": "Sales",
+          "description": "Assistance in lead follow-up, quotes and responses to potential customers."
+        },
+        "datos": {
+          "title": "Data",
+          "description": "Classification, analysis and smart summaries from unstructured information."
+        },
+        "tiempos": {
+          "title": "Time",
+          "description": "Process optimization to reduce wait times, rework and bottlenecks."
+        }
+      }
     }
   },
   "consultoria": {

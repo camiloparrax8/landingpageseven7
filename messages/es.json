@@ -226,8 +226,34 @@
       "eyebrow": "Soluciones",
       "title": "IA útil, no decorativa.",
       "lead": "No hablamos de inteligencia artificial como tendencia. La trabajamos como una herramienta que debe resolver, simplificar y aportar valor real.",
-      "panelTitle": "Dónde puede generar valor",
-      "panelBody": "Atención, operación, automatización documental, asistencia comercial, clasificación de datos y optimización de tiempos."
+      "ctaLabel": "Hablar del proyecto",
+      "cardsTitle": "Dónde generamos valor",
+      "cards": {
+        "atencion": {
+          "title": "Atención",
+          "description": "Asistentes y chatbots que responden, agendan, filtran y escalan de forma automática."
+        },
+        "operacion": {
+          "title": "Operación",
+          "description": "Automatización de flujos internos, alertas y tareas repetitivas que consumen tiempo."
+        },
+        "documental": {
+          "title": "Documentación",
+          "description": "Extracción, clasificación y generación de documentos con mínima intervención humana."
+        },
+        "comercial": {
+          "title": "Comercial",
+          "description": "Asistencia en seguimiento de leads, cotizaciones y respuestas a clientes potenciales."
+        },
+        "datos": {
+          "title": "Datos",
+          "description": "Clasificación, análisis y resúmenes inteligentes a partir de información no estructurada."
+        },
+        "tiempos": {
+          "title": "Tiempos",
+          "description": "Optimización de procesos para reducir esperas, reprocesos y cuellos de botella."
+        }
+      }
     }
   },
   "consultoria": {

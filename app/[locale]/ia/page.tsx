@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AiHighlightSection, PageHero } from "@/components/organisms";
+import type { AiCard } from "@/components/organisms/AiHighlightSection";
 
 type Props = { params: Promise<{ locale: string }> };
+
+const CARD_KEYS = ["atencion", "operacion", "documental", "comercial", "datos", "tiempos"] as const;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
@@ -21,6 +24,12 @@ export default async function IaPage({ params }: Props) {
   const tHero = await getTranslations("ia.hero");
   const tHi = await getTranslations("ia.highlight");
 
+  const cards: AiCard[] = CARD_KEYS.map((key) => ({
+    key,
+    title: tHi(`cards.${key}.title`),
+    description: tHi(`cards.${key}.description`),
+  }));
+
   return (
     <main>
       <PageHero
@@ -38,8 +47,9 @@ export default async function IaPage({ params }: Props) {
         eyebrow={tHi("eyebrow")}
         title={tHi("title")}
         lead={tHi("lead")}
-        panelTitle={tHi("panelTitle")}
-        panelBody={<p>{tHi("panelBody")}</p>}
+        ctaLabel={tHi("ctaLabel")}
+        cardsTitle={tHi("cardsTitle")}
+        cards={cards}
       />
     </main>
   );
