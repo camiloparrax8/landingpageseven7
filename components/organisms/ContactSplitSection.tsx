@@ -321,7 +321,7 @@ export function ContactSplitSection() {
                 <dt className="text-[11px] font-bold uppercase tracking-[0.14em] text-muted">
                   {tAside("locationLabel")}
                 </dt>
-                <dd className="m-0 mt-1.5 text-[15px] font-normal leading-[1.6] text-muted">
+                <dd className="m-0 mt-1.5 text-[15px] font-bold leading-[1.6] text-muted">
                   {tAside("locationLine")}
                 </dd>
               </div>
