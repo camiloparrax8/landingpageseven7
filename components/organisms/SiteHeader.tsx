@@ -44,14 +44,13 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
       ) : null}
       <div
         className={cn(
-          "relative z-[50] mx-auto flex h-full w-full max-w-[1200px] items-center justify-between gap-4 px-6 sm:px-10 md:gap-6 md:px-6 lg:px-4",
+          "relative z-[50] mx-auto flex h-full w-full max-w-[1640px] items-center justify-between gap-4 px-6 sm:px-10 md:px-6 lg:px-4",
         )}
       >
         <BrandLogo imageClassName="h-16 max-h-16 max-w-[min(200px,46vw)] object-left max-[820px]:h-10" />
 
-        <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
-
-        <div className="flex shrink-0 items-center justify-end gap-2 max-[480px]:gap-1.5 md:gap-3">
+        <div className="flex items-center gap-2 md:gap-3">
+          <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
           <LocaleSwitcher />
           <button
             type="button"
