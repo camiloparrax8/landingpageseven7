@@ -91,6 +91,7 @@ export const LOGO_STRIP = {
     { src: "/assets/clients/16.png", alt: "Logo de marca aliada 16" },
     { src: "/assets/clients/17.png", alt: "Logo de marca aliada 17" },
     { src: "/assets/clients/18.jpeg", alt: "Logo de marca aliada 18" },
+    { src: "/assets/clients/19.jpeg", alt: "Logo de marca aliada 19" },
   ],
 } as const;
 
