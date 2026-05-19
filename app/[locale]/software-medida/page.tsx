@@ -26,6 +26,7 @@ export default async function SoftwareMedidaPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="software"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), href: "/services" },

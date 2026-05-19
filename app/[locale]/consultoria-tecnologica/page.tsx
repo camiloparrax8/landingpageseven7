@@ -26,6 +26,7 @@ export default async function ConsultoriaPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="consulting"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), href: "/services" },

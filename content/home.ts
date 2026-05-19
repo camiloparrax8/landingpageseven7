@@ -7,8 +7,8 @@ export const HOME_HERO_POINTS = [
     text: "Experiencias claras, funcionales y listas para crecer.",
   },
   {
-    icon: "custom-software",
-    title: "Apps y software",
+    icon: "mobile",
+    title: "Apps móviles",
     text: "Desarrollo útil, escalable y adaptado a procesos reales.",
   },
   {
@@ -106,7 +106,7 @@ export const HOME_CTA = {
   copy: "Si estás buscando una solución clara, funcional y bien pensada, podemos ayudarte a construirla.",
   highlights: [
     { icon: "web" as const, label: "Web y plataformas" },
-    { icon: "custom-software" as const, label: "Apps y software" },
+    { icon: "mobile" as const, label: "Apps móviles" },
     { icon: "ai" as const, label: "IA aplicada" },
   ],
   primary: { href: "mailto:info@seven7company.com", label: "Agendar una llamada" },

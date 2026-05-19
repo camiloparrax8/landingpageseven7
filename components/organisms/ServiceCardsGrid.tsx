@@ -1,4 +1,5 @@
 import { ServiceCard } from "@/components/molecules/ServiceCard";
+import { ScrollRevealList, ScrollRevealItem } from "@/components/atoms/ScrollReveal";
 import type { ServiceCardContent } from "@/types/content";
 
 type ServiceCardsGridProps = {
@@ -7,10 +8,15 @@ type ServiceCardsGridProps = {
 
 export function ServiceCardsGrid({ cards }: ServiceCardsGridProps) {
   return (
-    <div className="grid grid-cols-1 gap-6 max-[1100px]:grid-cols-2 max-md:grid-cols-1 lg:grid-cols-3">
+    <ScrollRevealList
+      className="grid grid-cols-1 gap-6 max-[1100px]:grid-cols-2 max-md:grid-cols-1 lg:grid-cols-3"
+      staggerDelay={0.08}
+    >
       {cards.map((card) => (
-        <ServiceCard key={card.href} card={card} />
+        <ScrollRevealItem key={card.href}>
+          <ServiceCard card={card} />
+        </ScrollRevealItem>
       ))}
-    </div>
+    </ScrollRevealList>
   );
 }

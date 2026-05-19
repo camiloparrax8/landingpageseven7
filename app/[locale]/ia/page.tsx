@@ -34,6 +34,7 @@ export default async function IaPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="ia"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), href: "/services" },

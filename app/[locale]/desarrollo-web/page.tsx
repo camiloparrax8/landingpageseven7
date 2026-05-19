@@ -46,6 +46,7 @@ export default async function DesarrolloWebPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="web"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), href: "/services" },

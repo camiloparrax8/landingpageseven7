@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useRef } from "react";
+import { motion } from "framer-motion";
 import { CONTAINER } from "@/lib/layout";
 import { cn } from "@/lib/cn";
 
@@ -52,7 +53,13 @@ export function LogoStripSection({ title, logos }: LogoStripSectionProps) {
   }, []);
 
   return (
-    <section className="border-y border-ink/[0.06] bg-white py-8 max-md:py-7">
+    <motion.section
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+      className="border-y border-ink/[0.06] bg-white py-8 max-md:py-7"
+    >
       <div className={`${CONTAINER} grid min-w-0 gap-4`}>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="text-[13px] font-bold uppercase tracking-[0.08em] text-muted">
@@ -83,9 +90,13 @@ export function LogoStripSection({ title, logos }: LogoStripSectionProps) {
               "scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden",
             )}
           >
-            {logos.map((logo) => (
-              <div
+            {logos.map((logo, index) => (
+              <motion.div
                 key={logo.src}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.05, ease: [0.25, 0.1, 0.25, 1] }}
                 className="flex shrink-0 snap-center items-center justify-center"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -96,11 +107,11 @@ export function LogoStripSection({ title, logos }: LogoStripSectionProps) {
                   loading="eager"
                   decoding="async"
                 />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

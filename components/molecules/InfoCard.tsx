@@ -10,7 +10,7 @@ type InfoCardProps = {
 
 export function InfoCard({ title, icon, children }: InfoCardProps) {
   return (
-    <article className="flex flex-col rounded-[18px] border border-ink/[0.08] bg-white p-7 shadow-[0_10px_28px_rgba(29,53,80,0.05)] max-[480px]:px-[18px] max-[480px]:py-[22px]">
+    <article className="flex min-h-[285px] flex-col rounded-[18px] border border-ink/[0.08] bg-white p-7 shadow-[0_10px_28px_rgba(29,53,80,0.05)] max-[480px]:min-h-[200px] max-[480px]:px-[18px] max-[480px]:py-[22px]">
       {icon ? (
         <div
           className="mb-[22px] grid h-[54px] w-[54px] shrink-0 place-items-center rounded-2xl bg-panel text-ink"

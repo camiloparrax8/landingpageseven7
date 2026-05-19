@@ -5,6 +5,7 @@ export type MainNavHref =
   | "/services"
   | "/ia"
   | "/desarrollo-web"
+  | "/aplicaciones-moviles"
   | "/transformacion-digital";
 
 function stripLocale(pathname: string): string {
@@ -20,11 +21,6 @@ export function isNavActive(pathname: string, href: MainNavHref): boolean {
 
   if (href === "/") {
     return cleanPath === "/" || cleanPath === "";
-  }
-  if (href === "/desarrollo-web") {
-    return (
-      cleanPath === "/desarrollo-web" || cleanPath === "/aplicaciones-moviles"
-    );
   }
   if (href === "/services") {
     return (

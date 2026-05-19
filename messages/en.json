@@ -6,7 +6,9 @@
         "home": "Home",
         "services": "Services",
         "ia": "AI Solutions",
-        "webApps": "Web & Apps",
+        "web": "Web",
+        "mobile": "Apps",
+        "mobileAria": "Mobile applications",
         "digitalTransformation": "TD",
         "digitalTransformationAria": "Digital transformation"
       },
@@ -24,7 +26,8 @@
         "services": "Services",
         "consulting": "Technology Consulting",
         "ia": "AI Solutions",
-        "webApps": "Web & Apps",
+        "web": "Web Development",
+        "mobile": "Mobile Applications",
         "customSoftware": "Custom Software",
         "digitalTransformation": "Digital Transformation",
         "contact": "Contact"
@@ -58,7 +61,7 @@
           "text": "Clear, functional experiences ready to grow."
         },
         "apps": {
-          "title": "Apps & software",
+          "title": "Mobile apps",
           "text": "Useful, scalable development adapted to real processes."
         },
         "ai": {
@@ -112,7 +115,7 @@
       "copy": "If you're looking for a clear, functional and well-thought-out solution, we can help you build it.",
       "highlights": {
         "web": "Web & platforms",
-        "apps": "Apps & software",
+        "apps": "Mobile apps",
         "ai": "Applied AI"
       },
       "primaryLabel": "Schedule a call",
@@ -122,12 +125,12 @@
   "services": {
     "meta": {
       "title": "Services",
-      "description": "Technology solutions for companies that need to move forward with clarity: consulting, artificial intelligence, web development, apps, custom software and digital transformation."
+      "description": "At Seven Siete we develop technology solutions for companies that need to move forward with more structure, efficiency and clarity."
     },
     "hero": {
       "eyebrow": "Services",
-      "title": "Technology solutions for real needs.",
-      "description": "We help companies that need to build, organize or evolve their operations with clear, functional and well-implemented technology."
+      "title": "Services",
+      "description": "At Seven Siete we develop technology solutions for companies that need to move forward with more structure, efficiency and clarity. We support construction, improvement and digital evolution processes through consulting, web development, mobile applications, custom software, artificial intelligence and digital transformation. Each solution starts from a real business need and is designed to respond in a functional, scalable and strategic way."
     },
     "cards": {
       "consulting": {
@@ -215,12 +218,12 @@
   "ia": {
     "meta": {
       "title": "Artificial Intelligence",
-      "description": "We apply artificial intelligence to real processes to automate, assist, analyze and improve business decisions."
+      "description": "We apply artificial intelligence to solve real needs within business operations."
     },
     "hero": {
       "eyebrow": "Artificial Intelligence",
-      "title": "Artificial intelligence applied to business.",
-      "description": "We design AI solutions that connect with real processes to automate, assist, analyze and help make better decisions."
+      "title": "Artificial Intelligence",
+      "description": "We apply artificial intelligence to solve real needs within business operations. We design solutions that automate tasks, assist processes, analyze information, optimize time and strengthen decision-making. Our approach is not based on implementing AI as a trend, but on turning it into a useful tool, integrated and oriented towards concrete results."
     },
     "highlight": {
       "eyebrow": "Solutions",
@@ -280,12 +283,12 @@
   "webDevelopment": {
     "meta": {
       "title": "Web Development",
-      "description": "We create websites, landing pages and platforms that are clear, functional and well built for brands and companies."
+      "description": "We create websites, landing pages and digital platforms designed to communicate better, project more solidity and generate results."
     },
     "hero": {
       "eyebrow": "Web Development",
-      "title": "Clear, functional and well-built websites.",
-      "description": "We design and develop websites, landing pages and platforms focused on structure, experience, performance and conversion."
+      "title": "Web Development",
+      "description": "We create websites, landing pages and digital platforms designed to communicate better, project more solidity and generate results. We combine design, user experience, structure and development to build clear, functional web solutions ready to grow. Each project aims to correctly represent the company's value and turn digital presence into a real tool for positioning and business."
     },
     "sectionHeading": "What we build",
     "cards": {
@@ -328,13 +331,13 @@
   },
   "mobileApps": {
     "meta": {
-      "title": "Mobile Applications",
-      "description": "We design and develop intuitive and scalable apps for companies that need a solid mobile experience."
+      "title": "Mobile Applications (Apps)",
+      "description": "We design and develop mobile applications for companies that need to offer agile, intuitive and useful experiences on iOS and Android."
     },
     "hero": {
-      "eyebrow": "Mobile Applications",
-      "title": "Mobile apps meant to be used for real.",
-      "description": "We design and develop clear, intuitive and functional apps for companies that need to deliver a useful and scalable mobile experience."
+      "eyebrow": "Mobile Applications (Apps)",
+      "title": "Clear, functional apps designed to grow.",
+      "description": "We design and develop mobile applications for companies that need to offer agile, intuitive and useful experiences on iOS and Android. We build apps focused on usability, performance, scalability and integration with business processes, so they not only look good, but actually work, add value to the user and support the growth of operations."
     },
     "cards": {
       "service": {
@@ -375,12 +378,12 @@
   "digitalTransformation": {
     "meta": {
       "title": "Digital Transformation",
-      "description": "We guide your company's technological evolution with strategy, structure and execution focused on results."
+      "description": "We accompany companies in their digital evolution with a clear, organized and results-oriented vision."
     },
     "hero": {
       "eyebrow": "Digital Transformation",
-      "title": "Digital transformation with order and purpose.",
-      "description": "We help companies evolve their operations, tools and ways of working with a clear vision and solid execution."
+      "title": "Digital Transformation",
+      "description": "We accompany companies in their digital evolution with a clear, organized and results-oriented vision. We analyze operations, identify improvement opportunities and help implement tools, processes and solutions that make work more efficient, management clearer and growth capacity stronger. For us, digital transformation is not just changing technology, but building a better way to operate."
     },
     "cards": {
       "intro": {

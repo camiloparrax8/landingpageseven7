@@ -2,6 +2,7 @@ import { Eyebrow } from "@/components/atoms/Eyebrow";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { SectionCopy } from "@/components/atoms/SectionCopy";
 import { ButtonLink } from "@/components/atoms/ButtonLink";
+import { ScrollReveal, ScrollRevealList, ScrollRevealItem } from "@/components/atoms/ScrollReveal";
 import { CONTAINER, SECTION_Y } from "@/lib/layout";
 
 export type AiCard = {
@@ -71,49 +72,56 @@ export function AiHighlightSection({
       <div
         className={`${CONTAINER} grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,480px)] lg:gap-14`}
       >
-        {/* Columna izquierda: contenido + CTA */}
         <div className="flex flex-col items-start">
-          <Eyebrow className="text-white/70">{eyebrow}</Eyebrow>
-          <SectionTitle className="text-white">{title}</SectionTitle>
-          <SectionCopy className="text-white/80 max-md:text-base">
-            {lead}
-          </SectionCopy>
-          <ButtonLink
-            href="/contacto"
-            variant="primary"
-            className="mt-6 w-full sm:w-auto"
-          >
-            {ctaLabel}
-          </ButtonLink>
+          <ScrollReveal variant="fade-up">
+            <Eyebrow className="text-white/70">{eyebrow}</Eyebrow>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={0.1}>
+            <SectionTitle className="text-white">{title}</SectionTitle>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={0.2}>
+            <SectionCopy className="text-white/80 max-md:text-base">
+              {lead}
+            </SectionCopy>
+          </ScrollReveal>
+          <ScrollReveal variant="fade-up" delay={0.3}>
+            <ButtonLink
+              href="/contacto"
+              variant="primary"
+              className="mt-6 w-full sm:w-auto"
+            >
+              {ctaLabel}
+            </ButtonLink>
+          </ScrollReveal>
         </div>
 
-        {/* Columna derecha: tarjetas */}
         <div>
-          <h3 className="mb-5 text-lg font-semibold text-white/90 lg:mb-6">
-            {cardsTitle}
-          </h3>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <ScrollReveal variant="fade-left" delay={0.1}>
+            <h3 className="mb-5 text-lg font-semibold text-white/90 lg:mb-6">
+              {cardsTitle}
+            </h3>
+          </ScrollReveal>
+          <ScrollRevealList className="grid grid-cols-1 gap-3 sm:grid-cols-2" staggerDelay={0.08}>
             {IA_CARD_ORDER.map((key) => {
               const card = cardsByKey[key];
               if (!card) return null;
               return (
-                <article
-                  key={key}
-                  className="flex flex-col gap-2.5 rounded-2xl border border-white/[0.12] bg-white/[0.08] p-5"
-                >
-                  <div className="flex size-10 items-center justify-center rounded-lg bg-accent text-[#1d232b]">
-                    {IA_CARD_ICONS[key]}
-                  </div>
-                  <h4 className="text-[15px] font-semibold leading-snug text-white">
-                    {card.title}
-                  </h4>
-                  <p className="m-0 text-sm leading-relaxed text-white/70">
-                    {card.description}
-                  </p>
-                </article>
+                <ScrollRevealItem key={key} variant="scale">
+                  <article className="flex flex-col gap-2.5 rounded-2xl border border-white/[0.12] bg-white/[0.08] p-5">
+                    <div className="flex size-10 items-center justify-center rounded-lg bg-accent text-[#1d232b]">
+                      {IA_CARD_ICONS[key]}
+                    </div>
+                    <h4 className="text-[15px] font-semibold leading-snug text-white">
+                      {card.title}
+                    </h4>
+                    <p className="m-0 text-sm leading-relaxed text-white/70">
+                      {card.description}
+                    </p>
+                  </article>
+                </ScrollRevealItem>
               );
             })}
-          </div>
+          </ScrollRevealList>
         </div>
       </div>
     </section>

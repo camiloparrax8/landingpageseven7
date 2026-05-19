@@ -2,12 +2,13 @@
 
 import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { Eyebrow } from "@/components/atoms/Eyebrow";
 import { ButtonLink, BUTTON_PRIMARY_CLASS } from "@/components/atoms/ButtonLink";
 import { FormField, FIELD_CONTROL_CLASS } from "@/components/molecules/FormField";
 import { FOOTER_CONTACT } from "@/content/footer";
 import { CONTAINER, SECTION_Y } from "@/lib/layout";
-import { CONTACT_SECTION_BACKGROUND_LAYERS } from "@/lib/site-assets";
+import { getContactBackground } from "@/lib/site-assets";
 import { cn } from "@/lib/cn";
 
 const NEED_KEYS = [
@@ -161,7 +162,7 @@ export function ContactSplitSection() {
     >
       <div
         className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: CONTACT_SECTION_BACKGROUND_LAYERS }}
+        style={{ backgroundImage: getContactBackground("contact") }}
         aria-hidden
       />
       <div
@@ -170,7 +171,11 @@ export function ContactSplitSection() {
           "relative z-[1] grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(280px,400px)] lg:items-stretch lg:gap-10 xl:gap-12",
         )}
       >
-        <div
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
           className={cn(
             "flex h-full min-h-0 min-w-0 flex-col rounded-[20px] border border-ink/[0.08] bg-white/90 p-7 shadow-[0_10px_28px_rgba(29,53,80,0.05)] backdrop-blur-sm",
             "max-[480px]:px-[18px] max-[480px]:py-[22px] md:p-8",
@@ -299,9 +304,13 @@ export function ContactSplitSection() {
               </div>
             </div>
           </form>
-        </div>
+        </motion.div>
 
-        <aside
+        <motion.aside
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] }}
           className={cn(
             "flex h-full min-h-0 flex-col rounded-[20px] border border-ink/[0.08] bg-white/85 p-7 shadow-[0_10px_28px_rgba(29,53,80,0.05)] backdrop-blur-xl",
             "max-md:p-6 max-[480px]:p-[18px] md:p-8",
@@ -378,7 +387,7 @@ export function ContactSplitSection() {
               </ButtonLink>
             </div>
           </div>
-        </aside>
+        </motion.aside>
       </div>
     </section>
   );

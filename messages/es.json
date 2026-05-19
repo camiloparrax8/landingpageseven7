@@ -6,7 +6,9 @@
         "home": "Inicio",
         "services": "Servicios",
         "ia": "Soluciones IA",
-        "webApps": "Web y Apps",
+        "web": "Web",
+        "mobile": "Apps",
+        "mobileAria": "Aplicaciones móviles",
         "digitalTransformation": "TD",
         "digitalTransformationAria": "Transformación digital"
       },
@@ -24,7 +26,8 @@
         "services": "Servicios",
         "consulting": "Consultoría tecnológica",
         "ia": "Soluciones IA",
-        "webApps": "Web y Apps",
+        "web": "Desarrollo web",
+        "mobile": "Aplicaciones móviles",
         "customSoftware": "Software a la medida",
         "digitalTransformation": "Transformación digital",
         "contact": "Contacto"
@@ -58,7 +61,7 @@
           "text": "Experiencias claras, funcionales y listas para crecer."
         },
         "apps": {
-          "title": "Apps y software",
+          "title": "Apps móviles",
           "text": "Desarrollo útil, escalable y adaptado a procesos reales."
         },
         "ai": {
@@ -112,7 +115,7 @@
       "copy": "Si estás buscando una solución clara, funcional y bien pensada, podemos ayudarte a construirla.",
       "highlights": {
         "web": "Web y plataformas",
-        "apps": "Apps y software",
+        "apps": "Apps móviles",
         "ai": "IA aplicada"
       },
       "primaryLabel": "Agendar una llamada",
@@ -122,12 +125,12 @@
   "services": {
     "meta": {
       "title": "Servicios",
-      "description": "Soluciones tecnológicas para empresas que necesitan avanzar con claridad: consultoría, inteligencia artificial, desarrollo web, apps, software a la medida y transformación digital."
+      "description": "En Seven Siete desarrollamos soluciones tecnológicas para empresas que necesitan avanzar con más estructura, eficiencia y claridad."
     },
     "hero": {
       "eyebrow": "Servicios",
-      "title": "Soluciones tecnológicas para necesidades reales.",
-      "description": "Ayudamos a empresas que necesitan construir, ordenar o evolucionar su operación con tecnología clara, funcional y bien implementada."
+      "title": "Servicios",
+      "description": "En Seven Siete desarrollamos soluciones tecnológicas para empresas que necesitan avanzar con más estructura, eficiencia y claridad. Acompañamos procesos de construcción, mejora y evolución digital a través de consultoría, desarrollo web, aplicaciones móviles, software a la medida, inteligencia artificial y transformación digital. Cada solución parte de una necesidad real del negocio y se diseña para responder de forma funcional, escalable y estratégica."
     },
     "cards": {
       "consulting": {
@@ -215,12 +218,12 @@
   "ia": {
     "meta": {
       "title": "Inteligencia artificial",
-      "description": "Aplicamos inteligencia artificial a procesos reales para automatizar, asistir, analizar y mejorar decisiones de negocio."
+      "description": "Aplicamos inteligencia artificial para resolver necesidades reales dentro de la operación de las empresas."
     },
     "hero": {
       "eyebrow": "Inteligencia artificial",
-      "title": "Inteligencia artificial aplicada al negocio.",
-      "description": "Diseñamos soluciones de IA que se conectan con procesos reales para automatizar, asistir, analizar y ayudar a tomar mejores decisiones."
+      "title": "Inteligencia artificial",
+      "description": "Aplicamos inteligencia artificial para resolver necesidades reales dentro de la operación de las empresas. Diseñamos soluciones que permiten automatizar tareas, asistir procesos, analizar información, optimizar tiempos y fortalecer la toma de decisiones. Nuestro enfoque no se basa en implementar IA por tendencia, sino en convertirla en una herramienta útil, integrada y orientada a resultados concretos."
     },
     "highlight": {
       "eyebrow": "Soluciones",
@@ -280,12 +283,12 @@
   "webDevelopment": {
     "meta": {
       "title": "Desarrollo web",
-      "description": "Creamos sitios web, landings y plataformas claras, funcionales y bien construidas para marcas y empresas."
+      "description": "Creamos sitios web, landing pages y plataformas digitales pensadas para comunicar mejor, proyectar más solidez y generar resultados."
     },
     "hero": {
       "eyebrow": "Desarrollo web",
-      "title": "Sitios web claros, funcionales y bien construidos.",
-      "description": "Diseñamos y desarrollamos sitios web, landings y plataformas con foco en estructura, experiencia, rendimiento y conversión."
+      "title": "Desarrollo web",
+      "description": "Creamos sitios web, landing pages y plataformas digitales pensadas para comunicar mejor, proyectar más solidez y generar resultados. Combinamos diseño, experiencia de usuario, estructura y desarrollo para construir soluciones web claras, funcionales y listas para crecer. Cada proyecto busca representar correctamente el valor de la empresa y convertir la presencia digital en una herramienta real de posicionamiento y negocio."
     },
     "sectionHeading": "Qué construimos",
     "cards": {
@@ -328,13 +331,13 @@
   },
   "mobileApps": {
     "meta": {
-      "title": "Aplicaciones móviles",
-      "description": "Diseñamos y desarrollamos apps intuitivas y escalables para empresas que necesitan una experiencia móvil sólida."
+      "title": "Aplicaciones móviles (Apps)",
+      "description": "Diseñamos y desarrollamos aplicaciones móviles para empresas que necesitan ofrecer experiencias ágiles, intuitivas y útiles en iOS y Android."
     },
     "hero": {
-      "eyebrow": "Aplicaciones móviles",
-      "title": "Aplicaciones móviles pensadas para usarse de verdad.",
-      "description": "Diseñamos y desarrollamos apps claras, intuitivas y funcionales para empresas que necesitan ofrecer una experiencia móvil útil y escalable."
+      "eyebrow": "Aplicaciones móviles (Apps)",
+      "title": "Apps claras, funcionales y pensadas para crecer.",
+      "description": "Diseñamos y desarrollamos aplicaciones móviles para empresas que necesitan ofrecer experiencias ágiles, intuitivas y útiles en iOS y Android. Construimos apps con foco en usabilidad, rendimiento, escalabilidad e integración con los procesos del negocio, para que no solo se vean bien, sino que realmente funcionen, aporten valor al usuario y acompañen el crecimiento de la operación."
     },
     "cards": {
       "service": {
@@ -375,12 +378,12 @@
   "digitalTransformation": {
     "meta": {
       "title": "Transformación digital",
-      "description": "Acompañamos la evolución tecnológica de tu empresa con estrategia, estructura y ejecución enfocada en resultados."
+      "description": "Acompañamos a las empresas en su evolución digital con una visión clara, ordenada y orientada a resultados."
     },
     "hero": {
       "eyebrow": "Transformación digital",
-      "title": "Transformación digital con orden y sentido.",
-      "description": "Acompañamos empresas que necesitan evolucionar su operación, sus herramientas y su forma de trabajar con una visión clara y bien ejecutada."
+      "title": "Transformación digital",
+      "description": "Acompañamos a las empresas en su evolución digital con una visión clara, ordenada y orientada a resultados. Analizamos la operación, identificamos oportunidades de mejora y ayudamos a implementar herramientas, procesos y soluciones que hagan más eficiente el trabajo, más clara la gestión y más sólida la capacidad de crecimiento. Para nosotros, transformar digitalmente no es solo cambiar tecnología, sino construir una mejor forma de operar."
     },
     "cards": {
       "intro": {

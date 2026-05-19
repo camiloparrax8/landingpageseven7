@@ -29,6 +29,7 @@ export default async function TransformacionDigitalPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="digital"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), href: "/services" },

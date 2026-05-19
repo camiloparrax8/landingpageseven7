@@ -26,6 +26,7 @@ export default async function AplicacionesMovilesPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="apps"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), href: "/services" },

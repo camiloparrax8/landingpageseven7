@@ -1,10 +1,11 @@
 import { SectionTitle } from "@/components/atoms/SectionTitle";
+import { ScrollReveal } from "@/components/atoms/ScrollReveal";
 import { CONTAINER, SECTION_Y } from "@/lib/layout";
 import { cn } from "@/lib/cn";
+import { Children } from "react";
 
 type InfoCardsSectionProps = {
   columns?: 2 | 3 | 4;
-  /** Título de sección (h2) que abarca todo el ancho de la rejilla. */
   sectionHeading?: string;
   children: React.ReactNode;
 };
@@ -14,6 +15,8 @@ export function InfoCardsSection({
   sectionHeading,
   children,
 }: InfoCardsSectionProps) {
+  const childArray = Children.toArray(children);
+
   return (
     <section className={SECTION_Y}>
       <div
@@ -28,11 +31,17 @@ export function InfoCardsSection({
         )}
       >
         {sectionHeading ? (
-          <SectionTitle as="h2" className="col-span-full max-w-[40rem]">
-            {sectionHeading}
-          </SectionTitle>
+          <ScrollReveal variant="fade-up" className="col-span-full max-w-[40rem]">
+            <SectionTitle as="h2">
+              {sectionHeading}
+            </SectionTitle>
+          </ScrollReveal>
         ) : null}
-        {children}
+        {childArray.map((child, index) => (
+          <ScrollReveal key={index} variant="fade-up" delay={index * 0.08}>
+            {child}
+          </ScrollReveal>
+        ))}
       </div>
     </section>
   );

@@ -37,6 +37,7 @@ export default async function ServicesPage({ params }: Props) {
   return (
     <main>
       <PageHero
+        banner="services"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tNav("services"), current: true },

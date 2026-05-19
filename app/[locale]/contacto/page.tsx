@@ -24,6 +24,7 @@ export default async function ContactoPage({ params }: Props) {
     <main>
       <PageHero
         narrow
+        banner="contact"
         breadcrumbs={[
           { label: tNav("home"), href: "/" },
           { label: tHero("eyebrow"), current: true },
