@@ -96,8 +96,9 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 type FormStatus =
   | { type: "idle" }
-  | { type: "error"; message: string }
-  | { type: "info"; message: string };
+  | { type: "loading" }
+  | { type: "success" }
+  | { type: "error"; message: string };
 
 export function ContactSplitSection() {
   const t = useTranslations("contact.form");
@@ -105,7 +106,7 @@ export function ContactSplitSection() {
   const mailto = `mailto:${FOOTER_CONTACT.email}`;
   const [formStatus, setFormStatus] = useState<FormStatus>({ type: "idle" });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
@@ -125,31 +126,28 @@ export function ContactSplitSection() {
       return;
     }
 
-    const needKnown =
-      necesidad !== "" &&
-      (NEED_KEYS as readonly string[]).includes(necesidad);
-    const needLine = needKnown
-      ? t(`needOptions.${necesidad as (typeof NEED_KEYS)[number]}`)
-      : "—";
+    setFormStatus({ type: "loading" });
 
-    const body = [
-      `${t("nameLabel")}: ${nombre}`,
-      `${t("companyLabel")}: ${empresa || "—"}`,
-      `${t("emailLabel")}: ${correo}`,
-      `${t("phoneLabel")}: ${telefono || "—"}`,
-      `${t("needLabel")}: ${needLine}`,
-      "",
-      `${t("messageLabel")}:`,
-      mensaje,
-    ].join("\n");
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, empresa, correo, telefono, necesidad, mensaje }),
+      });
 
-    const href = `mailto:${FOOTER_CONTACT.email}?subject=${encodeURIComponent(t("mailSubject"))}&body=${encodeURIComponent(body)}`;
-    window.location.href = href;
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.error || "Error al enviar");
+      }
 
-    setFormStatus({
-      type: "info",
-      message: t("submitOpenedMailto", { email: FOOTER_CONTACT.email }),
-    });
+      setFormStatus({ type: "success" });
+      form.reset();
+    } catch (error) {
+      setFormStatus({
+        type: "error",
+        message: t("submitError"),
+      });
+    }
   };
 
   return (
@@ -186,17 +184,44 @@ export function ContactSplitSection() {
             {t("lead")}
           </p>
 
-          <div
-            className="mt-3 min-h-[1.25rem] text-sm font-medium leading-snug"
-            aria-live="polite"
-            role="status"
-          >
-            {formStatus.type === "error" ? (
-              <span className="text-[#b45309]">{formStatus.message}</span>
-            ) : formStatus.type === "info" ? (
-              <span className="text-ink-soft">{formStatus.message}</span>
-            ) : null}
-          </div>
+          {formStatus.type !== "idle" && (
+            <div
+              className={cn(
+                "mt-4 rounded-xl px-5 py-4 text-[15px] font-medium",
+                formStatus.type === "error" && "bg-amber-50 text-amber-800 ring-1 ring-amber-200",
+                formStatus.type === "loading" && "bg-blue-50 text-blue-700 ring-1 ring-blue-200",
+                formStatus.type === "success" && "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200",
+              )}
+              aria-live="polite"
+              role="status"
+            >
+              {formStatus.type === "error" && (
+                <span className="flex items-center gap-2">
+                  <svg className="size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                  {formStatus.message}
+                </span>
+              )}
+              {formStatus.type === "loading" && (
+                <span className="flex items-center gap-2">
+                  <svg className="size-5 shrink-0 animate-spin" viewBox="0 0 24 24" fill="none">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                  </svg>
+                  {t("submitLoading")}
+                </span>
+              )}
+              {formStatus.type === "success" && (
+                <span className="flex items-center gap-2">
+                  <svg className="size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  {t("submitSuccess")}
+                </span>
+              )}
+            </div>
+          )}
 
           <form
             className="mt-6 flex min-h-0 flex-1 flex-col"
@@ -294,12 +319,14 @@ export function ContactSplitSection() {
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-end">
                 <button
                   type="submit"
+                  disabled={formStatus.type === "loading"}
                   className={cn(
                     BUTTON_PRIMARY_CLASS,
                     "w-full min-w-0 sm:w-auto sm:min-w-[180px]",
+                    formStatus.type === "loading" && "cursor-not-allowed opacity-70",
                   )}
                 >
-                  {t("submitLabel")}
+                  {formStatus.type === "loading" ? t("submitLoading") : t("submitLabel")}
                 </button>
               </div>
             </div>
