@@ -1,0 +1,14 @@
+{
+  "/[locale]/aplicaciones-moviles/page": "/[locale]/aplicaciones-moviles",
+  "/[locale]/consultoria-tecnologica/page": "/[locale]/consultoria-tecnologica",
+  "/[locale]/contacto/page": "/[locale]/contacto",
+  "/[locale]/desarrollo-web/page": "/[locale]/desarrollo-web",
+  "/[locale]/ia/page": "/[locale]/ia",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/services/page": "/[locale]/services",
+  "/[locale]/software-medida/page": "/[locale]/software-medida",
+  "/[locale]/transformacion-digital/page": "/[locale]/transformacion-digital",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/contact/route": "/api/contact"
+}

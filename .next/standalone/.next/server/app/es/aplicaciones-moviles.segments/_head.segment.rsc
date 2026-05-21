@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[90774,["/_next/static/chunks/17.vqph92rt.3.js","/_next/static/chunks/12y2du4fvnd~f.js"],"ViewportBoundary"]
+3:I[90774,["/_next/static/chunks/17.vqph92rt.3.js","/_next/static/chunks/12y2du4fvnd~f.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+5:I[46513,["/_next/static/chunks/17.vqph92rt.3.js","/_next/static/chunks/12y2du4fvnd~f.js"],"IconMark"]
+0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Aplicaciones móviles (Apps) | Seven7 Company"}],["$","meta","1",{"name":"description","content":"Diseñamos y desarrollamos aplicaciones móviles para empresas que necesitan ofrecer experiencias ágiles, intuitivas y útiles en iOS y Android."}],["$","link","2",{"rel":"icon","href":"/assets/favicon.jpeg","type":"image/jpeg"}],["$","link","3",{"rel":"apple-touch-icon","href":"/assets/favicon.jpeg"}],["$","$L5","4",{}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"GormFjZ_0XhYRU_C1oDgN"}

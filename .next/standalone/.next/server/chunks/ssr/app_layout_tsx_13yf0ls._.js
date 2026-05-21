@@ -1,0 +1,3 @@
+module.exports=[33290,a=>{"use strict";a.s(["default",0,function({children:a}){return a},"metadata",0,{title:{default:"Seven7 Company | Tecnología para avanzar con claridad",template:"%s | Seven7 Company"},description:"Desarrollamos soluciones web, apps, software e inteligencia artificial para empresas que necesitan avanzar con orden, visión y ejecución.",icons:{icon:[{url:"/assets/favicon.jpeg",type:"image/jpeg"}],apple:"/assets/favicon.jpeg"}}])},70864,a=>{a.n(a.i(33290))}];
+
+//# sourceMappingURL=app_layout_tsx_13yf0ls._.js.map

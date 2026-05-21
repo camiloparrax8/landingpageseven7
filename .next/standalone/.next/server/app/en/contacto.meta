@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/[locale]/layout,_N_T_/[locale]/contacto/layout,_N_T_/[locale]/contacto/page,_N_T_/en/contacto"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/$d$locale/contacto/__PAGE__",
+    "/$d$locale/contacto",
+    "/$d$locale",
+    "/_index",
+    "/_head"
+  ]
+}

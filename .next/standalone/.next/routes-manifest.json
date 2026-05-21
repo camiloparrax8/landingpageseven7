@@ -1,0 +1,190 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/index\\.html(?:/)?$"
+    },
+    {
+      "source": "/services.html",
+      "destination": "/services",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/services\\.html(?:/)?$"
+    },
+    {
+      "source": "/consultoria-tecnologica.html",
+      "destination": "/consultoria-tecnologica",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/consultoria-tecnologica\\.html(?:/)?$"
+    },
+    {
+      "source": "/ia.html",
+      "destination": "/ia",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/ia\\.html(?:/)?$"
+    },
+    {
+      "source": "/desarrollo-web.html",
+      "destination": "/desarrollo-web",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/desarrollo-web\\.html(?:/)?$"
+    },
+    {
+      "source": "/aplicaciones-moviles.html",
+      "destination": "/aplicaciones-moviles",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/aplicaciones-moviles\\.html(?:/)?$"
+    },
+    {
+      "source": "/software-medida.html",
+      "destination": "/software-medida",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/software-medida\\.html(?:/)?$"
+    },
+    {
+      "source": "/transformacion-digital.html",
+      "destination": "/transformacion-digital",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/transformacion-digital\\.html(?:/)?$"
+    },
+    {
+      "source": "/contacto.html",
+      "destination": "/contacto",
+      "statusCode": 308,
+      "regex": "^(?!/_next)/contacto\\.html(?:/)?$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/[locale]",
+      "regex": "^/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/[locale]/aplicaciones-moviles",
+      "regex": "^/([^/]+?)/aplicaciones\\-moviles(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/aplicaciones\\-moviles(?:/)?$"
+    },
+    {
+      "page": "/[locale]/consultoria-tecnologica",
+      "regex": "^/([^/]+?)/consultoria\\-tecnologica(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/consultoria\\-tecnologica(?:/)?$"
+    },
+    {
+      "page": "/[locale]/contacto",
+      "regex": "^/([^/]+?)/contacto(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/contacto(?:/)?$"
+    },
+    {
+      "page": "/[locale]/desarrollo-web",
+      "regex": "^/([^/]+?)/desarrollo\\-web(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/desarrollo\\-web(?:/)?$"
+    },
+    {
+      "page": "/[locale]/ia",
+      "regex": "^/([^/]+?)/ia(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/ia(?:/)?$"
+    },
+    {
+      "page": "/[locale]/services",
+      "regex": "^/([^/]+?)/services(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/services(?:/)?$"
+    },
+    {
+      "page": "/[locale]/software-medida",
+      "regex": "^/([^/]+?)/software\\-medida(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/software\\-medida(?:/)?$"
+    },
+    {
+      "page": "/[locale]/transformacion-digital",
+      "regex": "^/([^/]+?)/transformacion\\-digital(?:/)?$",
+      "routeKeys": {
+        "nxtPlocale": "nxtPlocale"
+      },
+      "namedRegex": "^/(?<nxtPlocale>[^/]+?)/transformacion\\-digital(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/contact",
+      "regex": "^/api/contact(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/contact(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

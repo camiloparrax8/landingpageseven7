@@ -1,0 +1,36 @@
+{
+  "name": "seven7-next",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "sync-assets": "node scripts/sync-assets.cjs",
+    "predev": "npm run sync-assets",
+    "prebuild": "npm run sync-assets",
+    "dev": "next dev --webpack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "framer-motion": "^12.39.0",
+    "next": "16.2.4",
+    "next-intl": "^4.11.0",
+    "nodemailer": "^8.0.7",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@ljharb/tsconfig": "^0.2.3",
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^20",
+    "@types/nodemailer": "^8.0.0",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.4",
+    "postcss": "^8.5.13",
+    "tailwindcss": "^4.2.4",
+    "typescript": "^5"
+  }
+}

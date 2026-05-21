@@ -1,0 +1,14 @@
+{
+  "/[locale]/aplicaciones-moviles/page": "app/[locale]/aplicaciones-moviles/page.js",
+  "/[locale]/consultoria-tecnologica/page": "app/[locale]/consultoria-tecnologica/page.js",
+  "/[locale]/contacto/page": "app/[locale]/contacto/page.js",
+  "/[locale]/desarrollo-web/page": "app/[locale]/desarrollo-web/page.js",
+  "/[locale]/ia/page": "app/[locale]/ia/page.js",
+  "/[locale]/page": "app/[locale]/page.js",
+  "/[locale]/services/page": "app/[locale]/services/page.js",
+  "/[locale]/software-medida/page": "app/[locale]/software-medida/page.js",
+  "/[locale]/transformacion-digital/page": "app/[locale]/transformacion-digital/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/contact/route": "app/api/contact/route.js"
+}
