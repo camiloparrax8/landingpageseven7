@@ -2,7 +2,7 @@
  * Rutas públicas de medios (`public/assets`, vía `npm run sync-assets`).
  */
 export const SITE_ASSETS = {
-  logo: "/assets/seven7-logo.png",
+  logo: "/assets/" + encodeURIComponent("Logo Curvas Seven_letral.svg"),
   logoWhite: "/assets/" + encodeURIComponent("Logo Seven Blanco.png"),
 } as const;
 
