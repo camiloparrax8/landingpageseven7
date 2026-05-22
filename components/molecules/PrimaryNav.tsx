@@ -29,16 +29,16 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
 
   return (
     <div
+      id="mobile-nav-panel"
       className={cn(
-        "flex items-center gap-6 max-md:flex-col max-md:items-stretch max-md:gap-3 md:gap-7",
         menuOpen
-          ? "max-md:absolute max-md:left-0 max-md:right-0 max-md:top-full max-md:z-[49] max-md:flex max-md:border-b max-md:border-slate-200/90 max-md:bg-slate-50 max-md:px-6 max-md:pb-5 max-md:pt-3 max-md:shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
-          : "max-md:hidden",
-        "md:static md:flex md:flex-row md:border-0 md:bg-transparent md:p-0 md:shadow-none",
+          ? "max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:gap-3 max-lg:absolute max-lg:inset-x-0 max-lg:top-full max-lg:z-[49] max-lg:border-b max-lg:border-slate-200/90 max-lg:bg-slate-50 max-lg:px-6 max-lg:pb-5 max-lg:pt-3 max-lg:shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
+          : "max-lg:hidden",
+        "lg:absolute lg:left-1/2 lg:top-1/2 lg:z-[48] lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:gap-7 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none",
       )}
     >
       <nav
-        className="flex items-center gap-6 max-md:flex-col max-md:items-start max-md:gap-0 max-md:self-stretch md:gap-7"
+        className="flex items-center gap-6 max-lg:flex-col max-lg:items-start max-lg:gap-0 max-lg:self-stretch lg:gap-7"
         aria-label="Principal"
       >
         {NAV_ITEMS.map((item) => {
@@ -54,12 +54,12 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
               href={href}
               aria-label={ariaLabel}
               className={cn(
-                "relative text-[15px] font-semibold text-[#0f172a] transition-opacity max-md:block max-md:w-full max-md:border-b max-md:border-slate-200/80 max-md:py-3.5 max-md:text-base",
+                "relative text-[15px] font-semibold text-[#0f172a] transition-opacity max-lg:block max-lg:w-full max-lg:border-b max-lg:border-slate-200/80 max-lg:py-3.5 max-lg:text-base",
                 isActive ? "opacity-100" : "opacity-90 hover:opacity-100",
-                "max-md:last:border-b-0",
-                "md:pb-1",
+                "max-lg:last:border-b-0",
+                "lg:pb-1",
                 isActive &&
-                  "md:after:absolute md:after:bottom-0 md:after:left-0 md:after:right-0 md:after:h-[3px] md:after:bg-[#F4C21F] md:after:rounded-t-sm",
+                  "lg:after:absolute lg:after:bottom-0 lg:after:left-0 lg:after:right-0 lg:after:h-[3px] lg:after:bg-[#F4C21F] lg:after:rounded-t-sm",
               )}
             >
               {t(`nav.${labelKey}`)}
@@ -70,7 +70,7 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
       <ButtonLink
         href="/contacto"
         variant="primary"
-        className="!min-h-[40px] px-5 py-2 text-[14px] shadow-[0_8px_24px_rgba(244,194,31,0.28)] max-md:mt-2 max-md:!min-h-[48px] max-md:px-7 max-md:py-2.5 max-md:text-[15px] max-md:w-full max-md:justify-center"
+        className="!min-h-[40px] px-5 py-2 text-[14px] shadow-[0_8px_24px_rgba(244,194,31,0.28)] max-lg:mt-2 max-lg:!min-h-[48px] max-lg:px-7 max-lg:py-2.5 max-lg:text-[15px] max-lg:w-full max-lg:justify-center"
       >
         {t("cta")}
       </ButtonLink>
