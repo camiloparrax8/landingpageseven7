@@ -34,7 +34,7 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
         menuOpen
           ? "max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:gap-3 max-lg:absolute max-lg:inset-x-0 max-lg:top-full max-lg:z-[49] max-lg:border-b max-lg:border-slate-200/90 max-lg:bg-slate-50 max-lg:px-6 max-lg:pb-5 max-lg:pt-3 max-lg:shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
           : "max-lg:hidden",
-        "lg:absolute lg:left-1/2 lg:top-1/2 lg:z-[48] lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:gap-7 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none",
+        "lg:absolute lg:left-1/2 lg:top-1/2 lg:z-[52] lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:gap-7 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none",
       )}
     >
       <nav
