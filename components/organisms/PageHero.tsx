@@ -17,6 +17,7 @@ type PageHeroProps = {
   banner?: BannerId;
 };
 
+
 export function PageHero({
   narrow,
   breadcrumbs,
