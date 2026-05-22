@@ -36,6 +36,33 @@ npm run build
 npm start
 ```
 
+## Variables de entorno
+
+Copia `.env.example` a `.env` y configura las siguientes variables:
+
+### SMTP (formulario de contacto)
+
+| Variable | Descripción |
+|----------|-------------|
+| `SMTP_HOST` | Servidor SMTP (ej. `mail.tudominio.com`) |
+| `SMTP_PORT` | Puerto SMTP (normalmente `465` para SSL) |
+| `SMTP_USER` | Usuario / correo de envío |
+| `SMTP_PASSWORD` | Contraseña del buzón SMTP |
+| `CONTACT_EMAIL` | Correo que recibe las consultas |
+
+### reCAPTCHA v2
+
+Protege el formulario de spam. Crea las claves en [Google reCAPTCHA Admin](https://www.google.com/recaptcha/admin) (tipo v2 checkbox).
+
+| Variable | Descripción |
+|----------|-------------|
+| `NEXT_PUBLIC_RECAPTCHA_SITE_KEY` | Clave pública (widget en el navegador) |
+| `RECAPTCHA_SECRET_KEY` | Clave secreta (verificación en servidor) |
+
+En desarrollo sin claves, puedes usar `RECAPTCHA_BYPASS=true` para omitir la verificación (nunca en producción).
+
 ## Despliegue
 
-Compatible con [Vercel](https://vercel.com/) u otro hosting Node para Next.js. Consulta la [documentación de despliegue de Next.js](https://nextjs.org/docs/app/building-your-application/deploying).
+Compatible con [Vercel](https://vercel.com/) u otro hosting Node para Next.js. Configura las variables de entorno en el panel del proveedor.
+
+Consulta la [documentación de despliegue de Next.js](https://nextjs.org/docs/app/building-your-application/deploying).

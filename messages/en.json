@@ -184,6 +184,8 @@
       "submitLoading": "Sending...",
       "submitSuccess": "Message sent! We'll get back to you soon.",
       "submitError": "Could not send. Please try again or contact us directly.",
+      "submitRejected": "Could not process your request. Please try again.",
+      "captchaRequired": "Complete the security check before submitting.",
       "nameLabel": "Name",
       "namePlaceholder": "Name",
       "companyLabel": "Company",

@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, useEffect, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { Eyebrow } from "@/components/atoms/Eyebrow";
 import { ButtonLink, BUTTON_PRIMARY_CLASS } from "@/components/atoms/ButtonLink";
 import { FormField, FIELD_CONTROL_CLASS } from "@/components/molecules/FormField";
+import { ContactRecaptcha, type ContactRecaptchaRef } from "@/components/molecules/ContactRecaptcha";
 import { FOOTER_CONTACT } from "@/content/footer";
 import { CONTAINER, SECTION_Y } from "@/lib/layout";
 import { getContactBackground } from "@/lib/site-assets";
@@ -32,7 +33,6 @@ const selectControl = cn(
   "cursor-pointer appearance-none pr-11",
 );
 
-/** Mismo cuerpo que ubicación (Bogotá), en negrita; enlaces con subrayado al hover. */
 const linkChannel =
   "text-[15px] font-bold leading-[1.6] text-muted underline-offset-[5px] transition-colors hover:text-ink-soft hover:underline";
 
@@ -100,11 +100,28 @@ type FormStatus =
   | { type: "success" }
   | { type: "error"; message: string };
 
+const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || "";
+
 export function ContactSplitSection() {
   const t = useTranslations("contact.form");
   const tAside = useTranslations("contact.aside");
   const mailto = `mailto:${FOOTER_CONTACT.email}`;
   const [formStatus, setFormStatus] = useState<FormStatus>({ type: "idle" });
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<ContactRecaptchaRef>(null);
+  const formStartedAtRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    formStartedAtRef.current = Date.now();
+  }, []);
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
+  };
+
+  const handleCaptchaExpired = () => {
+    setCaptchaToken(null);
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -116,6 +133,7 @@ export function ContactSplitSection() {
     const telefono = String(fd.get("telefono") ?? "").trim();
     const necesidad = String(fd.get("necesidad") ?? "").trim();
     const mensaje = String(fd.get("mensaje") ?? "").trim();
+    const website = String(fd.get("website") ?? "").trim();
 
     if (!nombre || !correo || !mensaje) {
       setFormStatus({ type: "error", message: t("validationRequired") });
@@ -125,6 +143,10 @@ export function ContactSplitSection() {
       setFormStatus({ type: "error", message: t("validationEmailInvalid") });
       return;
     }
+    if (!captchaToken && RECAPTCHA_SITE_KEY) {
+      setFormStatus({ type: "error", message: t("captchaRequired") });
+      return;
+    }
 
     setFormStatus({ type: "loading" });
 
@@ -132,20 +154,32 @@ export function ContactSplitSection() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, empresa, correo, telefono, necesidad, mensaje }),
+        body: JSON.stringify({
+          nombre,
+          empresa,
+          correo,
+          telefono,
+          necesidad,
+          mensaje,
+          recaptchaToken: captchaToken || "",
+          website,
+          formStartedAt: formStartedAtRef.current,
+        }),
       });
 
       if (!response.ok) {
-        const data = await response.json();
-        throw new Error(data.error || "Error al enviar");
+        throw new Error("Error al enviar");
       }
 
       setFormStatus({ type: "success" });
       form.reset();
-    } catch (error) {
+      setCaptchaToken(null);
+      recaptchaRef.current?.reset();
+      formStartedAtRef.current = Date.now();
+    } catch {
       setFormStatus({
         type: "error",
-        message: t("submitError"),
+        message: t("submitRejected"),
       });
     }
   };
@@ -228,6 +262,16 @@ export function ContactSplitSection() {
             onSubmit={handleSubmit}
             noValidate
           >
+            {/* Honeypot field - hidden from users, visible to bots */}
+            <input
+              type="text"
+              name="website"
+              autoComplete="off"
+              tabIndex={-1}
+              aria-hidden="true"
+              className="absolute -left-[9999px] h-0 w-0 opacity-0"
+            />
+
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
             <FormField id="nombre" label={t("nameLabel")}>
               <input
@@ -314,6 +358,17 @@ export function ContactSplitSection() {
               />
             </FormField>
             </div>
+
+            {RECAPTCHA_SITE_KEY && (
+              <div className="mt-5">
+                <ContactRecaptcha
+                  ref={recaptchaRef}
+                  siteKey={RECAPTCHA_SITE_KEY}
+                  onChange={handleCaptchaChange}
+                  onExpired={handleCaptchaExpired}
+                />
+              </div>
+            )}
 
             <div className="mt-auto border-t border-ink/[0.08] pt-6">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-end">

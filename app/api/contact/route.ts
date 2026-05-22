@@ -1,14 +1,11 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
-
-interface ContactFormData {
-  nombre: string;
-  empresa?: string;
-  correo: string;
-  telefono?: string;
-  necesidad?: string;
-  mensaje: string;
-}
+import {
+  validateContactPayload,
+  verifyRecaptcha,
+  sanitizePayload,
+  type ContactPayload,
+} from "@/lib/contact-security";
 
 const NEED_LABELS: Record<string, string> = {
   consulting: "Consultoría tecnológica",
@@ -19,25 +16,35 @@ const NEED_LABELS: Record<string, string> = {
   digital: "Transformación digital",
 };
 
+const GENERIC_ERROR = { error: "No se pudo procesar la solicitud" };
+
 export async function POST(request: Request) {
   try {
-    const body = (await request.json()) as ContactFormData;
-    const { nombre, empresa, correo, telefono, necesidad, mensaje } = body;
+    const body = await request.json();
 
-    if (!nombre || !correo || !mensaje) {
+    const validation = validateContactPayload(body);
+    if (!validation.valid) {
+      console.warn("[contact] Validation failed:", validation.reason);
+      return NextResponse.json(GENERIC_ERROR, { status: 400 });
+    }
+
+    const payload = body as ContactPayload;
+    const captchaValid = await verifyRecaptcha(payload.recaptchaToken);
+    if (!captchaValid) {
+      console.warn("[contact] reCAPTCHA verification failed");
+      return NextResponse.json(GENERIC_ERROR, { status: 400 });
+    }
+
+    if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
+      console.error("[contact] SMTP configuration missing");
       return NextResponse.json(
-        { error: "Faltan campos requeridos" },
-        { status: 400 }
+        { error: "Configuración del servidor incompleta" },
+        { status: 503 }
       );
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(correo)) {
-      return NextResponse.json(
-        { error: "Correo inválido" },
-        { status: 400 }
-      );
-    }
+    const sanitized = sanitizePayload(payload);
+    const { nombre, empresa, correo, telefono, necesidad, mensaje } = sanitized;
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -92,14 +99,14 @@ export async function POST(request: Request) {
 Nueva consulta desde la web
 ===========================
 
-Nombre: ${nombre}
-Empresa: ${empresa || "—"}
-Correo: ${correo}
-Teléfono: ${telefono || "—"}
+Nombre: ${payload.nombre.trim()}
+Empresa: ${payload.empresa?.trim() || "—"}
+Correo: ${payload.correo.trim()}
+Teléfono: ${payload.telefono?.trim() || "—"}
 Necesidad: ${needLine}
 
 Mensaje:
-${mensaje}
+${payload.mensaje.trim()}
 
 ---
 Este mensaje fue enviado desde el formulario de contacto de seven7company.com
@@ -108,8 +115,8 @@ Este mensaje fue enviado desde el formulario de contacto de seven7company.com
     await transporter.sendMail({
       from: `"Seven Siete Company" <${process.env.SMTP_USER}>`,
       to: process.env.CONTACT_EMAIL || process.env.SMTP_USER,
-      replyTo: correo,
-      subject: `Consulta web: ${nombre}${empresa ? ` — ${empresa}` : ""}`,
+      replyTo: payload.correo.trim(),
+      subject: `Consulta web: ${payload.nombre.trim()}${payload.empresa?.trim() ? ` — ${payload.empresa.trim()}` : ""}`,
       text: textContent,
       html: htmlContent,
     });
@@ -196,14 +203,14 @@ Este mensaje fue enviado desde el formulario de contacto de seven7company.com
     `;
 
     const confirmationText = `
-¡Gracias por contactarnos, ${nombre}!
+¡Gracias por contactarnos, ${payload.nombre.trim()}!
 
 Hemos recibido tu mensaje y nuestro equipo lo revisará pronto. Te responderemos en un plazo máximo de 24 horas hábiles.
 
 ---
 
 Resumen de tu mensaje:
-${mensaje}
+${payload.mensaje.trim()}
 
 ---
 
@@ -217,7 +224,7 @@ info@seven7company.com
 
     await transporter.sendMail({
       from: `"Seven Siete Company" <${process.env.SMTP_USER}>`,
-      to: correo,
+      to: payload.correo.trim(),
       subject: "¡Recibimos tu mensaje! — Seven Siete Company",
       text: confirmationText,
       html: confirmationHtml,
@@ -225,7 +232,7 @@ info@seven7company.com
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error("Error sending email:", error);
+    console.error("[contact] Error sending email:", error);
     return NextResponse.json(
       { error: "Error al enviar el mensaje" },
       { status: 500 }

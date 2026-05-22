@@ -184,6 +184,8 @@
       "submitLoading": "Enviando...",
       "submitSuccess": "¡Mensaje enviado! Te responderemos pronto.",
       "submitError": "No se pudo enviar. Intenta de nuevo o escríbenos directamente.",
+      "submitRejected": "No se pudo procesar tu solicitud. Intenta de nuevo.",
+      "captchaRequired": "Completa la verificación de seguridad antes de enviar.",
       "nameLabel": "Nombre",
       "namePlaceholder": "Nombre",
       "companyLabel": "Empresa",
