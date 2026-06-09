@@ -33,7 +33,7 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
   }, [menuOpen]);
 
   return (
-    <header className="relative sticky top-0 z-50 overflow-x-clip border-b border-slate-200/80 bg-slate-50">
+    <header className="sticky top-0 z-50 overflow-x-clip border-b border-slate-200/80 bg-slate-50 [--header-h:88px] max-md:[--header-h:72px] max-[480px]:[--header-h:66px]">
       {menuOpen ? (
         <button
           type="button"
@@ -45,13 +45,14 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
 
       <div
         className={cn(
-          "relative z-[50] mx-auto flex h-[88px] min-w-0 w-full max-w-[1200px] items-center justify-between gap-3 px-6",
-          "max-md:h-[72px] max-[480px]:h-[66px] lg:px-4",
+          "relative z-[50] mx-auto flex h-[var(--header-h)] min-w-0 w-full max-w-[1200px] items-center justify-between gap-3 px-6",
+          "lg:px-4",
         )}
       >
         <BrandLogo imageClassName="h-10 w-auto max-h-10 max-w-[min(160px,38vw)] shrink-0 object-contain object-left lg:h-16 lg:max-h-16 lg:max-w-[200px]" />
 
-        <div className="relative z-[51] flex shrink-0 items-center justify-end gap-2 max-[480px]:gap-1.5 md:gap-3">
+        <div className="z-[51] flex shrink-0 items-center justify-end gap-2 max-[480px]:gap-1.5 md:gap-3">
+          <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
           <LocaleSwitcher />
           <button
             type="button"
@@ -78,8 +79,6 @@ function SiteHeaderBar({ pathname }: { pathname: string }) {
           </button>
         </div>
       </div>
-
-      <PrimaryNav pathname={pathname} menuOpen={menuOpen} />
     </header>
   );
 }

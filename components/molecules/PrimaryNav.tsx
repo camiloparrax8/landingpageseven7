@@ -32,13 +32,13 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
       id="mobile-nav-panel"
       className={cn(
         menuOpen
-          ? "max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:gap-3 max-lg:absolute max-lg:inset-x-0 max-lg:top-full max-lg:z-[49] max-lg:border-b max-lg:border-slate-200/90 max-lg:bg-slate-50 max-lg:px-6 max-lg:pb-5 max-lg:pt-3 max-lg:shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
+          ? "max-lg:fixed max-lg:inset-x-0 max-lg:top-[var(--header-h)] max-lg:z-[49] max-lg:flex max-lg:flex-col max-lg:items-stretch max-lg:gap-3 max-lg:border-b max-lg:border-slate-200/90 max-lg:bg-slate-50 max-lg:px-6 max-lg:pb-5 max-lg:pt-3 max-lg:shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
           : "max-lg:hidden",
-        "lg:absolute lg:left-1/2 lg:top-1/2 lg:z-[52] lg:flex lg:-translate-x-1/2 lg:-translate-y-1/2 lg:flex-row lg:items-center lg:gap-7 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none",
+        "lg:flex lg:flex-row lg:items-center lg:gap-4 lg:shrink-0 lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none xl:gap-5",
       )}
     >
       <nav
-        className="flex items-center gap-6 max-lg:flex-col max-lg:items-start max-lg:gap-0 max-lg:self-stretch lg:gap-7"
+        className="flex items-center gap-6 max-lg:flex-col max-lg:items-start max-lg:gap-0 max-lg:self-stretch lg:gap-4 xl:gap-6"
         aria-label="Principal"
       >
         {NAV_ITEMS.map((item) => {
@@ -54,7 +54,7 @@ export function PrimaryNav({ pathname, menuOpen }: PrimaryNavProps) {
               href={href}
               aria-label={ariaLabel}
               className={cn(
-                "relative text-[15px] font-semibold text-[#0f172a] transition-opacity max-lg:block max-lg:w-full max-lg:border-b max-lg:border-slate-200/80 max-lg:py-3.5 max-lg:text-base",
+                "relative text-[15px] font-semibold text-[#0f172a] transition-opacity max-lg:block max-lg:w-full max-lg:border-b max-lg:border-slate-200/80 max-lg:py-3.5 max-lg:text-base lg:text-[14px] xl:text-[15px]",
                 isActive ? "opacity-100" : "opacity-90 hover:opacity-100",
                 "max-lg:last:border-b-0",
                 "lg:pb-1",
