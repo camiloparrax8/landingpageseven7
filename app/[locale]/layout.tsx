@@ -2,9 +2,14 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
+import Script from "next/script";
+import { GoogleAnalytics } from "@/components/atoms/GoogleAnalytics";
 import { SiteFooter, SiteHeader } from "@/components/organisms";
 import { locales, type Locale } from "@/i18n/config";
 import "../globals.css";
+
+const GA_MEASUREMENT_ID =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-03WPZN1GQ2";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,7 +47,20 @@ export default async function LocaleLayout({
         className="min-h-screen bg-surface font-sans text-body antialiased"
         suppressHydrationWarning
       >
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
+          `}
+        </Script>
         <NextIntlClientProvider messages={messages}>
+          <GoogleAnalytics measurementId={GA_MEASUREMENT_ID} />
           <SiteHeader />
           {children}
           <SiteFooter />
