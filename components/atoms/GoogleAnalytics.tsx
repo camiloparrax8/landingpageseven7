@@ -17,8 +17,12 @@ export function GoogleAnalytics({ measurementId }: GoogleAnalyticsProps) {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.gtag?.("config", measurementId, {
+    // Evento explícito: los `config` repetidos para el mismo ID son
+    // deduplicados por gtag.js y no generarían page_view.
+    window.gtag?.("event", "page_view", {
       page_path: pathname,
+      page_location: window.location.href,
+      send_to: measurementId,
     });
   }, [measurementId, pathname]);
 
