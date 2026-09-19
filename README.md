@@ -44,7 +44,7 @@ Copia `.env.example` a `.env` y configura las siguientes variables:
 
 | Variable | Descripción |
 |----------|-------------|
-| `NEXT_PUBLIC_GA_MEASUREMENT_ID` | ID de medición del flujo de datos web (GA4 → Admin → Flujos de datos). Ej: `G-XXXXXXXXXX` |
+| `GA_MEASUREMENT_ID` | ID de medición del flujo de datos web (GA4 → Admin → Flujos de datos). Ej: `G-XXXXXXXXXX` |
 
 ### SMTP (formulario de contacto)
 

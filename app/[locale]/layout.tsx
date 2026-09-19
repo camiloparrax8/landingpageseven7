@@ -8,7 +8,7 @@ import { locales, type Locale } from "@/i18n/config";
 import "../globals.css";
 
 const GA_MEASUREMENT_ID =
-  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ?? "G-03WPZN1GQ2";
+  process.env.GA_MEASUREMENT_ID ?? "G-03WPZN1GQ2";
 
 const inter = Inter({
   subsets: ["latin"],
